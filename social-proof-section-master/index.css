@@ -1,0 +1,93 @@
+:root {
+  /* PRIMARY COLORS */
+  --Very-Dark-Magenta: #502050;
+  --Soft-Pink: #ee68a4;
+  /* NEUTRAL COLORS */
+  --Dark-Grayish-Magenta: #937b92;
+  --Light-Grayish-Magenta: #f7f2f7;
+  --White: #ffffff;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+strong {
+  line-height: 30px;
+}
+
+.container {
+  text-align: center;
+  padding: 3em 0;
+  margin: 0 auto;
+  width: 90%;
+}
+
+h1 {
+  color: var(--Very-Dark-Magenta);
+}
+
+.hero-paragraph {
+  font-weight: 500;
+  color: var(--Dark-Grayish-Magenta);
+  opacity: 0.6;
+  line-height: 22.5px;
+  padding-bottom: 1em;
+}
+
+.rates {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  margin: 1em 0;
+  border-radius: 0.75em;
+  background: var(--Light-Grayish-Magenta);
+}
+
+.rates strong {
+  color: var(--Very-Dark-Magenta);
+  padding-top: 0.25em;
+}
+
+.comment {
+  text-align: left;
+  background: var(--Very-Dark-Magenta);
+  color: var(--White);
+  border-radius: 0.75em;
+  padding: 1.75em;
+  margin: 1em 0;
+}
+
+.comment .info-container {
+  display: flex;
+  align-items: center;
+}
+
+.comment .info-container img {
+  width: 40px;
+  border-radius: 5em;
+  margin-right: 1em;
+}
+
+.comment .info-container .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment .info-container .info small {
+  color: var(--Soft-Pink);
+}
+
+.comment p {
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
