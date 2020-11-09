@@ -132,6 +132,17 @@ h1 {
   margin-bottom: 2em;
 }
 
+.attribution {
+  text-align: center;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media screen and (max-width: 1024px) {
   main {
     text-align: center;
