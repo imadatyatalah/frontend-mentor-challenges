@@ -1,3 +1,5 @@
+import "../styles/main.scss";
+
 const MyApp = ({ Component, pageProps }) => {
   return (
     <>
