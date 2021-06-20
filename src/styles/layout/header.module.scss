@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+
+    &__toggle {
+        display: none;
+    }
+
+    &__desktop_nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__toggle {
+            display: block;
+        }
+
+        &__desktop_nav {
+            display: none;
+        }
+
+        &__nav__open {
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
+}
