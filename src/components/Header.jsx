@@ -32,9 +32,21 @@ const Header = () => {
           }`}
         >
           <ul>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Resources</li>
+            <li>
+              <Link href="/features">
+                <a>Features</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/pricing">
+                <a>Pricing</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/resources">
+                <a>Resources</a>
+              </Link>
+            </li>
           </ul>
 
           <div>
