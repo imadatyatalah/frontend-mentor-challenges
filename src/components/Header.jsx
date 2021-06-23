@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import headerStyles from "../styles/layout/header.module.scss";
+import buttons from "../styles/components/buttons.module.scss";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -51,7 +52,7 @@ const Header = () => {
 
           <div>
             <button>Login</button>
-            <button>Sign Up</button>
+            <button className={buttons.primary_btn}>Sign Up</button>
           </div>
         </nav>
 
