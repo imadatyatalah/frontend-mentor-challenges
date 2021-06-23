@@ -1,0 +1,27 @@
+@use "../abstracts/colors";
+@use "../abstracts/fonts";
+
+.primary_btn {
+  font-size: fonts.$text-lg;
+  font-family: fonts.$font-poppins;
+  font-weight: 700;
+
+  color: white;
+  background-color: colors.$cyan;
+  padding: 0.6rem 1.25rem;
+  border-radius: 2.5rem;
+}
+
+.primary_btn:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .primary_btn {
+    width: 100%;
+  }
+
+  .primary_btn:hover {
+    opacity: 100%;
+  }
+}
