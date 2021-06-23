@@ -1,0 +1,19 @@
+@use "../abstracts/fonts";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: fonts.$text-lg;
+  font-family: fonts.$font-poppins;
+  letter-spacing: 0.02em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
