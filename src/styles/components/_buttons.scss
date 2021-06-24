@@ -10,18 +10,18 @@
   background-color: colors.$cyan;
   padding: 0.6rem 1.25rem;
   border-radius: 2.5rem;
-}
 
-.primary_btn:hover {
-  opacity: 60%;
+  &:hover {
+    opacity: 60%;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .primary_btn {
     width: 100%;
-  }
 
-  .primary_btn:hover {
-    opacity: 100%;
+    &:hover {
+      opacity: 100%;
+    }
   }
 }
