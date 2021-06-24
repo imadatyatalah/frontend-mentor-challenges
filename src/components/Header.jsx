@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import headerStyles from "../styles/layout/header.module.scss";
-import buttons from "../styles/components/buttons.module.scss";
-
 const Header = () => {
   const [open, setOpen] = useState(false);
 
@@ -12,10 +9,10 @@ const Header = () => {
 
   return (
     <>
-      <header className={headerStyles.header}>
-        <div className={headerStyles.header__logo}>
+      <header className="header">
+        <div>
           <Link href="/">
-            <a>
+            <a className="header__logo">
               <Image
                 src="/logo.svg"
                 width="121"
@@ -27,36 +24,42 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav
-          className={`${headerStyles.header__desktop_nav} ${
-            open && headerStyles.header__nav__open
-          }`}
-        >
+        <nav className={`header__nav ${open && "header__mobile-nav"}`}>
           <ul>
             <li>
               <Link href="/features">
-                <a>Features</a>
+                <a className="header__link">Features</a>
               </Link>
             </li>
             <li>
               <Link href="/pricing">
-                <a>Pricing</a>
+                <a className="header__link">Pricing</a>
               </Link>
             </li>
             <li>
               <Link href="/resources">
-                <a>Resources</a>
+                <a className="header__link">Resources</a>
               </Link>
             </li>
           </ul>
 
-          <div>
-            <button>Login</button>
-            <button className={buttons.primary_btn}>Sign Up</button>
+          {/* Call To Actions */}
+          <div className="header__cta-container">
+            <Link href="/login">
+              <a className="header__link" style={{ display: "inline-block" }}>
+                Login
+              </a>
+            </Link>
+
+            <Link href="/sign-up">
+              <a className="primary_btn" style={{ display: "inline-block" }}>
+                Sign Up
+              </a>
+            </Link>
           </div>
         </nav>
 
-        <div className={headerStyles.header__toggle}>
+        <div className="header__toggle">
           <button onClick={handleClick}>
             <svg
               fill="#bfbfbf"
