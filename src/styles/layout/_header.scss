@@ -1,6 +1,8 @@
 @use "../abstracts/colors";
 @use "../abstracts/breakpoints";
 
+// Desktop First
+
 .header {
   max-width: 1440px;
   margin: 0 auto;
@@ -60,6 +62,10 @@
 
 @media only screen and (max-width: breakpoints.$breakpoint-tablet) {
   .header {
+    .sign-up-btn {
+      width: 100%;
+    }
+
     &__link {
       opacity: 100%;
       color: white;

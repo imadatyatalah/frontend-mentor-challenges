@@ -52,7 +52,10 @@ const Header = () => {
             </Link>
 
             <Link href="/sign-up">
-              <a className="primary_btn" style={{ display: "inline-block" }}>
+              <a
+                className="primary_btn sign-up-btn"
+                style={{ display: "inline-block" }}
+              >
                 Sign Up
               </a>
             </Link>
