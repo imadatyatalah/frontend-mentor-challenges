@@ -13,6 +13,13 @@ body {
   letter-spacing: 0.02em;
 }
 
+main,
+header,
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 button {
   cursor: pointer;
   border: none;

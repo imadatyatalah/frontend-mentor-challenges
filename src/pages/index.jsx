@@ -19,7 +19,7 @@ const Home = () => {
             height="482"
             placeholder="blur"
             blurDataURL="LFKx^@004n-:4on4$R-W:R~C00tm"
-            alt=""
+            alt="working illustration"
           />
         </div>
 
