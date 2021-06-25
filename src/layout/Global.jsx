@@ -6,7 +6,7 @@ const Global = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <main>{children}</main>
     </>
   );
 };
