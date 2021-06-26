@@ -1,0 +1,84 @@
+@use '../abstracts/colors';
+@use '../abstracts/breakpoints';
+
+// Mobile First
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 2rem 0;
+  background-color: colors.$very-dark-violet;
+
+  &__container {
+    &__links {
+      margin: 2rem 0;
+
+      h2 {
+        padding-bottom: 0.75rem;
+      }
+
+      ul li {
+        list-style: none;
+
+        a {
+          color: colors.$gray;
+          display: inline-block;
+          margin: 0.25rem 0;
+        }
+      }
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin: 0 0.75rem;
+    }
+  }
+}
+
+@media only screen and (min-width: breakpoints.$breakpoint-tablet) {
+  .footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    justify-items: center;
+    text-align: left;
+    padding: 2rem 1.5rem;
+
+    &__container {
+      display: flex;
+
+      &__links {
+        white-space: nowrap;
+        margin: 0 0.5rem;
+      }
+    }
+
+    &__social-media a {
+      margin: 0 0.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: breakpoints.$breakpoint-laptop) {
+  .footer {
+    padding: 2rem 5rem;
+
+    &__container {
+      &__links {
+        margin: 0 2.5rem;
+      }
+    }
+
+    &__social-media a {
+      margin: 0 0.75rem;
+    }
+  }
+}
