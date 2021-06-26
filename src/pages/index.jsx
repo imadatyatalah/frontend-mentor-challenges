@@ -11,8 +11,8 @@ const Home = () => {
       <NextSeo title="Frontend Mentor | Shortly URL shortening API Challenge" />
 
       {/* Hero Section */}
-      <section className={styles.container}>
-        <div className={styles.container__img}>
+      <section className={styles.hero_container}>
+        <div className={styles.hero_container__img}>
           <Image
             src="/illustrations/illustration-working.svg"
             width="733"
@@ -23,13 +23,21 @@ const Home = () => {
           />
         </div>
 
-        <div className={styles.container__info}>
+        <div className={styles.hero_container__info}>
           <h1>More than just shorter links</h1>
 
           <p>
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
+
+          <button className="primary_btn">Get Started</button>
+        </div>
+      </section>
+
+      <section className={styles.sub_footer_container}>
+        <div>
+          <h2>Boost your links today</h2>
 
           <button className="primary_btn">Get Started</button>
         </div>
