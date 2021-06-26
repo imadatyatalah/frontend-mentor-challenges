@@ -22,7 +22,7 @@ const Footer = () => {
 
         <div className="footer__container">
           <div className="footer__container__links">
-            <h2>Features</h2>
+            <h3>Features</h3>
 
             <ul>
               <li>
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__container__links">
-            <h2>Resources</h2>
+            <h3>Resources</h3>
 
             <ul>
               <li>
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
 
           <div className="footer__container__links">
-            <h2>Company</h2>
+            <h3>Company</h3>
 
             <ul>
               <li>
