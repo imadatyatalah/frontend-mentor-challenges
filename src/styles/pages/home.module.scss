@@ -3,7 +3,8 @@
 
 // Mobile First
 
-.container {
+// Hero Section
+.hero_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +26,7 @@
 }
 
 @media only screen and (min-width: breakpoints.$breakpoint-laptop) {
-  .container {
+  .hero_container {
     padding: 2.5rem 5rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -48,7 +49,7 @@
 }
 
 @media only screen and (min-width: breakpoints.$breakpoint-desktop) {
-  .container {
+  .hero_container {
     &__info {
       h1 {
         font-size: 3.75rem;
@@ -59,6 +60,34 @@
         padding-right: 3rem;
         line-height: 32.5px;
       }
+    }
+  }
+}
+
+// Sub Footer
+.sub_footer_container {
+  background-image: url("/bg/bg-boost-mobile.svg");
+  background-color: colors.$dark-violet;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  padding: 5rem 0;
+
+  text-align: center;
+
+  h2 {
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$breakpoint-tablet) {
+  .sub_footer_container {
+    background-image: url("/bg/bg-boost-desktop.svg");
+
+    h2 {
+      padding-bottom: 1rem;
+      font-size: 36px;
     }
   }
 }
