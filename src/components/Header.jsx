@@ -27,17 +27,17 @@ const Header = () => {
         <nav className={`header__nav ${open && "header__mobile-nav"}`}>
           <ul>
             <li>
-              <Link href="/features">
+              <Link href="/#">
                 <a className="header__link">Features</a>
               </Link>
             </li>
             <li>
-              <Link href="/pricing">
+              <Link href="/#">
                 <a className="header__link">Pricing</a>
               </Link>
             </li>
             <li>
-              <Link href="/resources">
+              <Link href="/#">
                 <a className="header__link">Resources</a>
               </Link>
             </li>
@@ -45,13 +45,13 @@ const Header = () => {
 
           {/* Call To Actions */}
           <div className="header__cta-container">
-            <Link href="/login">
+            <Link href="/#">
               <a className="header__link" style={{ display: "inline-block" }}>
                 Login
               </a>
             </Link>
 
-            <Link href="/sign-up">
+            <Link href="/#">
               <a
                 className="primary_btn sign-up-btn"
                 style={{ display: "inline-block" }}
