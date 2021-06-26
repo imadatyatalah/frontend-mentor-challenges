@@ -58,6 +58,12 @@
       &__links {
         white-space: nowrap;
         margin: 0 0.5rem;
+
+        ul li a {
+          &:hover {
+            color: colors.$cyan;
+          }
+        }
       }
     }
 
