@@ -84,6 +84,7 @@
 @media only screen and (min-width: breakpoints.$breakpoint-tablet) {
   .sub_footer_container {
     background-image: url("/bg/bg-boost-desktop.svg");
+    padding: 2.5rem 0;
 
     h2 {
       padding-bottom: 1rem;
