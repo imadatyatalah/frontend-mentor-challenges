@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import { DefaultSeo } from "next-seo";
 import NProgress from "nprogress";
 
+import Global from "@/layout/global";
 import SEO from "next-seo.config";
 
 import "nprogress/nprogress.css";
@@ -22,9 +23,12 @@ NProgress.configure({ showSpinner: false });
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
+      <DefaultSeo {...SEO} />
+
       <ThemeProvider defaultTheme="system" attribute="class">
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        <Global>
+          <Component {...pageProps} />
+        </Global>
       </ThemeProvider>
     </>
   );
