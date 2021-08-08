@@ -48,7 +48,7 @@ export type Country = {
   nativeName: string;
   numericCode: string;
   currencies: Currencies[];
-  language: Language[];
+  languages: Language[];
   translations: Translations;
   flag: string;
   regionalBlocs: RegionalBlocs[];
