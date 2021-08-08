@@ -1,6 +1,6 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
 
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily, boxShadow } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -22,6 +22,11 @@ module.exports = {
         "dark-gray": "var(--dark-gray)",
         "very-light-gray": "var(--very-light-gray)",
       },
+    },
+
+    boxShadow: {
+      ...boxShadow,
+      custom: "0px 0px 5px 2.5px rgba(0,0,0,0.2)",
     },
   },
   variants: {
