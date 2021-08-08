@@ -13,7 +13,7 @@ const Header = () => {
   if (!mounted) return null;
 
   return (
-    <header className="bg-white dark:bg-dark-blue flex justify-between items-center h-[60px] px-4 custom_max_width">
+    <header className="custom_max_width bg-white dark:bg-dark-blue flex justify-between items-center h-[60px] px-4 sm:px-10 lg:px-12">
       <h1 className="font-extrabold sm:text-xl md:text-2xl select-none">
         <Link href="/">
           <a>Where in the world?</a>
