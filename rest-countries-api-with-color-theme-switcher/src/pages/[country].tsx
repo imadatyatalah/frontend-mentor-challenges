@@ -118,24 +118,26 @@ const Country = ({ country }: { country: TCountry }) => {
                 </li>
               </ul>
 
-              <ul className="py-3">
-                <li className="font-light py-px">
-                  <span className="text-xl font-semibold">
-                    Border Countries:{" "}
-                  </span>
+              {borders.length ? (
+                <ul className="py-3">
+                  <li className="font-light py-px">
+                    <span className="text-xl font-semibold">
+                      Border Countries:{" "}
+                    </span>
 
-                  <p className="my-6">
-                    {borders?.map((border) => (
-                      <Link href={`/${border}`} key={border}>
-                        <a className="inline-block mb-4 bg-white dark:bg-dark-blue mr-4 py-2 px-7 rounded-md shadow-custom">
-                          {/* TODO: Display country name instead of country alpha 3 code */}
-                          {border}
-                        </a>
-                      </Link>
-                    ))}
-                  </p>
-                </li>
-              </ul>
+                    <p className="my-6">
+                      {borders.map((border) => (
+                        <Link href={`/${border}`} key={border}>
+                          <a className="inline-block mb-4 bg-white dark:bg-dark-blue mr-4 py-2 px-7 rounded-md shadow-custom">
+                            {/* TODO: Display country name instead of country alpha 3 code */}
+                            {border}
+                          </a>
+                        </Link>
+                      ))}
+                    </p>
+                  </li>
+                </ul>
+              ) : null}
             </div>
           </div>
         </div>
