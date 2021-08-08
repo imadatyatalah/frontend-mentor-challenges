@@ -14,6 +14,14 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...fontFamily.sans],
       },
+
+      colors: {
+        "dark-blue": "var(--dark-blue)",
+        "very-dark-blue": "var(--very-dark-blue)",
+        "vary-dark-blue-darker": "var(--vary-dark-blue-darker)",
+        "dark-gray": "var(--dark-gray)",
+        "very-light-gray": "var(--very-light-gray)",
+      },
     },
   },
   variants: {
