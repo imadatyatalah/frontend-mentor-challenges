@@ -42,3 +42,7 @@
   --dark-gray: #858585;
   --very-light-gray: #fafafa;
 }
+
+.custom_max_width {
+  @apply mx-auto max-w-[1440px];
+}

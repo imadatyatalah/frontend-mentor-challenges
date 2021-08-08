@@ -5,7 +5,7 @@ import Header from "@/components/header";
 const Global = ({ children }: { children: React.ReactNode }) => (
   <>
     <Header />
-    <main className="">{children}</main>
+    <main className="custom_max_width">{children}</main>
   </>
 );
 
