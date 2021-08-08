@@ -11,7 +11,7 @@ import { fetcher } from "@/utils/fetcher";
 import { Country as TCountry } from "@/types/country";
 
 const Country = ({ country }: { country: TCountry }) => {
-  const { query } = useRouter();
+  const { query, isFallback } = useRouter();
 
   const { data } = useSWR<TCountry>(
     `https://restcountries.eu/rest/v2/alpha/${query?.country}`,
@@ -19,7 +19,7 @@ const Country = ({ country }: { country: TCountry }) => {
     { initialData: country }
   );
 
-  if (!data) return <div>loading...</div>;
+  if (!data || isFallback) return <div>loading...</div>;
 
   const {
     name,
@@ -65,64 +65,77 @@ const Country = ({ country }: { country: TCountry }) => {
           </Link>
         </button>
 
-        <div className="flex">
-          <Image src={flag} width="700" height="500" alt={`${demonym} flag`} />
-        </div>
+        <div className="xl:grid xl:grid-cols-2 xl:items-center">
+          <div className="flex xl:mr-20">
+            <Image
+              src={flag}
+              width="700"
+              height="500"
+              alt={`${demonym} flag`}
+            />
+          </div>
 
-        <div className="pt-8">
-          <h1 className="text-3xl font-extrabold">{name}</h1>
+          <div className="pt-8">
+            <h1 className="text-3xl font-extrabold">{name}</h1>
 
-          <ul className="py-3">
-            <li className="font-light py-px">
-              <span className="font-semibold">Native Name: </span>
-              {nativeName}
-            </li>
-            <li className="font-light py-px">
-              <span className="font-semibold">Population: </span>
-              {population.toLocaleString()}
-            </li>
-            <li className="font-light py-px">
-              <span className="font-semibold">Region: </span>
-              {region}
-            </li>
-            <li className="font-light py-px">
-              <span className="font-semibold">Sub Region: </span>
-              {subregion}
-            </li>
-            <li className="font-light py-px">
-              <span className="font-semibold">Capital: </span>
-              {capital}
-            </li>
-          </ul>
+            <div className="xl:grid xl:grid-cols-2">
+              <ul className="py-3">
+                <li className="font-light py-px">
+                  <span className="font-semibold">Native Name: </span>
+                  {nativeName}
+                </li>
+                <li className="font-light py-px">
+                  <span className="font-semibold">Population: </span>
+                  {population.toLocaleString()}
+                </li>
+                <li className="font-light py-px">
+                  <span className="font-semibold">Region: </span>
+                  {region}
+                </li>
+                <li className="font-light py-px">
+                  <span className="font-semibold">Sub Region: </span>
+                  {subregion}
+                </li>
+                <li className="font-light py-px">
+                  <span className="font-semibold">Capital: </span>
+                  {capital}
+                </li>
+              </ul>
 
-          <ul className="py-3">
-            <li className="font-light py-px">
-              <span className="font-semibold">Top Level Domain: </span>
-              {topLevelDomain}
-            </li>
-            <li className="font-light py-px">
-              <span className="font-semibold">Currencies: </span>
+              <ul className="py-3">
+                <li className="font-light py-px">
+                  <span className="font-semibold">Top Level Domain: </span>
+                  {topLevelDomain}
+                </li>
+                <li className="font-light py-px">
+                  <span className="font-semibold">Currencies: </span>
 
-              {currencies?.map((currency) => currency.name)}
-            </li>
-            <li className="font-light py-px">
-              <span className="font-semibold">Languages: </span>
-              {languages?.map((language) => language.name).join(", ")}
-            </li>
-          </ul>
+                  {currencies?.map((currency) => currency.name)}
+                </li>
+                <li className="font-light py-px">
+                  <span className="font-semibold">Languages: </span>
+                  {languages?.map((language) => language.name).join(", ")}
+                </li>
+              </ul>
 
-          <div className="py-3">
-            <h2 className="text-xl font-semibold">Border Countries: </h2>
+              <ul className="py-3">
+                <li className="font-light py-px">
+                  <span className="text-xl font-semibold">
+                    Border Countries:{" "}
+                  </span>
 
-            <div className="my-6">
-              {borders?.map((border) => (
-                <Link href={`/${border}`} key={border}>
-                  <a className="inline-block mb-4 bg-white dark:bg-dark-blue mr-4 py-2 px-7 rounded-md shadow-custom">
-                    {/* TODO: Display country name instead of country alpha 3 code */}
-                    {border}
-                  </a>
-                </Link>
-              ))}
+                  <p className="my-6">
+                    {borders?.map((border) => (
+                      <Link href={`/${border}`} key={border}>
+                        <a className="inline-block mb-4 bg-white dark:bg-dark-blue mr-4 py-2 px-7 rounded-md shadow-custom">
+                          {/* TODO: Display country name instead of country alpha 3 code */}
+                          {border}
+                        </a>
+                      </Link>
+                    ))}
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
