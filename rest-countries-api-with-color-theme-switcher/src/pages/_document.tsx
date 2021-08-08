@@ -8,13 +8,27 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/inter-var-latin.woff2"
+            href="/fonts/NunitoSans-Light.ttf"
             as="font"
-            type="font/woff2"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/NunitoSans-SemiBold.ttf"
+            as="font"
+            type="font/ttf"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/NunitoSans-ExtraBold.ttf"
+            as="font"
+            type="font/ttf"
             crossOrigin="anonymous"
           />
         </Head>
-        <body className="bg-white dark:bg-black text-black dark:text-white">
+        <body>
           <Main />
           <NextScript />
         </body>
