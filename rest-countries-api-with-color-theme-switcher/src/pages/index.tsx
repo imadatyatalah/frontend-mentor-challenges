@@ -1,38 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { GetStaticProps } from "next";
 
-import { useTheme } from "next-themes";
 import { NextSeo } from "next-seo";
+import useSWR from "swr";
 
-const Home = () => {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+import { fetcher } from "@/utils/fetcher";
+import { Country } from "@/types/country";
+import CountryCard from "@/components/countryCard";
 
-  useEffect(() => setMounted(true), []);
+const Home = ({ countries }: { countries: Country[] }) => {
+  const { data } = useSWR<Country[]>(
+    "https://restcountries.eu/rest/v2/all",
+    fetcher,
+    { initialData: countries }
+  );
 
-  if (!mounted) return null;
+  if (!data) return <div>loading...</div>;
 
   return (
     <>
       <NextSeo title="Home" />
 
-      <section>
-        <div className="py-20 flex flex-col items-center justify-center">
-          <h1 className="text-5xl text-center text-gray-800 dark:text-gray-100 font-bold">
-            Next Themes + Tailwind Dark Mode
-          </h1>
-
-          <button
-            className="mt-16 px-4 py-2 text-white dark:text-black bg-black dark:bg-white font-semibold rounded-md"
-            onClick={() => {
-              setTheme(resolvedTheme === "light" ? "dark" : "light");
-            }}
-          >
-            Change Theme
-          </button>
-        </div>
+      <section className="mx-12 sm:mx-8 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        {countries.length
+          ? countries.map((country) => (
+              <CountryCard country={country} key={country.name} />
+            ))
+          : null}
       </section>
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const countries = await fetcher("https://restcountries.eu/rest/v2/all");
+
+  return { props: { countries } };
 };
 
 export default Home;
