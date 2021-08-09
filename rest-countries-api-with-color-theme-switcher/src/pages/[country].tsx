@@ -119,16 +119,16 @@ const Country = ({ country }: { country: TCountry }) => {
               </ul>
 
               {borders.length ? (
-                <ul className="py-3">
-                  <li className="font-light py-px">
-                    <span className="text-xl font-semibold">
+                <ul className="py-3 xl:col-start-1 xl:col-end-3">
+                  <li className="font-light">
+                    <span className="text-xl font-semibold xl:inline-flex xl:mr-3">
                       Border Countries:{" "}
                     </span>
 
-                    <p className="my-6">
+                    <p className="my-4 xl:my-0 xl:inline">
                       {borders.map((border) => (
                         <Link href={`/${border}`} key={border}>
-                          <a className="inline-block mb-4 bg-white dark:bg-dark-blue mr-4 py-2 px-7 rounded-md shadow-custom">
+                          <a className="inline-block mb-4 mr-3 py-2 px-7 bg-white dark:bg-dark-blue rounded-md shadow-custom">
                             {/* TODO: Display country name instead of country alpha 3 code */}
                             {border}
                           </a>
