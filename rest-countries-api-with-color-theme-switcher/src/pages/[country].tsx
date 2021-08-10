@@ -41,7 +41,7 @@ const Country = ({ country }: { country: TCountry }) => {
       <NextSeo title={name} />
 
       <section className="custom_max-width px-4 sm:px-10 lg:px-12">
-        <button className="bg-white dark:bg-dark-blue my-10 py-2 px-7 rounded-md shadow-custom">
+        <button className="element my-10 py-2 px-7 rounded-md shadow-custom">
           <Link href="/">
             <a className="flex items-center">
               {/* Arrow left icon */}
@@ -128,7 +128,7 @@ const Country = ({ country }: { country: TCountry }) => {
                     <p className="my-4 xl:my-0 xl:inline">
                       {borders.map((border) => (
                         <Link href={`/${border}`} key={border}>
-                          <a className="inline-block mb-4 mr-3 py-2 px-7 bg-white dark:bg-dark-blue rounded-md shadow-custom">
+                          <a className="inline-block mb-4 mr-3 py-2 px-7 element rounded-md shadow-custom">
                             {/* TODO: Display country name instead of country alpha 3 code */}
                             {border}
                           </a>

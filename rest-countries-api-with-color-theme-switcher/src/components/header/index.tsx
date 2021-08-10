@@ -13,14 +13,14 @@ const Header = () => {
   if (!mounted) return null;
 
   return (
-    <header className="custom_max_width bg-white dark:bg-dark-blue flex justify-between items-center shadow-md h-[80px] px-4 sm:px-10 lg:px-12">
+    <header className="element flex justify-between items-center shadow-md h-[80px] px-4 sm:px-10 lg:px-12">
       <h1 className="font-extrabold sm:text-xl md:text-2xl select-none">
         <Link href="/">
           <a>Where in the world?</a>
         </Link>
       </h1>
 
-      <div className="text-very-dark-blue-darker dark:text-white">
+      <div className="text">
         <button
           className="flex items-center"
           onClick={() => {

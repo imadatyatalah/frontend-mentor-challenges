@@ -9,7 +9,7 @@ const CountryCard = ({ country }: { country: Country }) => {
     country;
 
   return (
-    <div className="bg-white dark:bg-dark-blue my-8 shadow-lg rounded-md sm:mx-2 lg:mx-4">
+    <div className="element my-8 shadow-lg rounded-md sm:mx-2 lg:mx-4">
       <div className="flex">
         <Link href={`/${alpha3Code}`}>
           <a>

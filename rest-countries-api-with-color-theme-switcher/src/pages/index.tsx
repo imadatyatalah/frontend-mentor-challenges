@@ -54,7 +54,7 @@ const Home = ({ countries }: { countries: Country[] }) => {
           <div className="mt-8 py-1 relative flex items-center w-full sm:w-6/12 lg:w-5/12">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-8 absolute text-gray-400"
+              className="h-5 w-5 ml-8 absolute text-dark-gray dark:text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -72,7 +72,7 @@ const Home = ({ countries }: { countries: Country[] }) => {
               name="country"
               id="country"
               onChange={handleInputChange}
-              className="shadow-lg-center py-4 pr-4 pl-16 w-full rounded-md focus:outline-none"
+              className="shadow-lg-center py-4 pr-4 pl-16 w-full rounded-md focus:outline-none placeholder-dark-gray dark:bg-dark-blue dark:placeholder-white"
               placeholder="Search for a country..."
             />
           </div>

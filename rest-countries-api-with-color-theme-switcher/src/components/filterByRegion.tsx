@@ -5,7 +5,7 @@ import { Menu, Transition } from "@headlessui/react";
 const FilterByRegion = ({ children }: { children: React.ReactNode }) => (
   <Menu as="div" className="mt-8 z-10 w-56 relative inline-block text-left">
     <div>
-      <Menu.Button className="inline-flex justify-between items-center w-full px-6 py-4 text-sm font-semibold text-very-dark-blue-darker bg-white dark:text-white rounded-md shadow-lg-center focus:outline-none dark:bg-dark-blue">
+      <Menu.Button className="element text inline-flex justify-between items-center w-full px-6 py-4 text-sm font-semibold rounded-md shadow-lg-center focus:outline-none">
         Filter by Region
         <svg
           xmlns="http://www.w3.org/2000/svg"

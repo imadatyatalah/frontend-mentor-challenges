@@ -43,6 +43,17 @@
   --very-light-gray: #fafafa;
 }
 
-.custom_max_width {
-  @apply mx-auto max-w-[1440px];
+@layer base {
+  main,
+  header {
+    @apply mx-auto max-w-[1440px];
+  }
+}
+
+.element {
+  @apply bg-white dark:bg-dark-blue;
+}
+
+.text {
+  @apply text-very-dark-blue-darker dark:text-white;
 }
