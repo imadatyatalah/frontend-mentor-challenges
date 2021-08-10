@@ -8,6 +8,7 @@ import { fetcher } from "@/utils/fetcher";
 import { Country } from "@/types/country";
 import FilterByRegion, { MenuItem } from "@/components/filterByRegion";
 import CountryCard from "@/components/countryCard";
+import Button from "@/components/button";
 
 const Home = ({ countries }: { countries: Country[] }) => {
   const [page, setPage] = useState(1);
@@ -97,13 +98,13 @@ const Home = ({ countries }: { countries: Country[] }) => {
         </div>
 
         <div className="text-center">
-          <button
-            className="disabled:cursor-not-allowed"
+          <Button
+            className="mb-8"
             onClick={() => setPage(page + 1)}
             disabled={page * countriesPerPage >= filteredData.length}
           >
             Load More
-          </button>
+          </Button>
         </div>
       </section>
     </>

@@ -9,6 +9,7 @@ import useSWR from "swr";
 
 import { fetcher } from "@/utils/fetcher";
 import { Country as TCountry } from "@/types/country";
+import Button from "@/components/button";
 
 const Country = ({ country }: { country: TCountry }) => {
   const { query, isFallback } = useRouter();
@@ -41,7 +42,7 @@ const Country = ({ country }: { country: TCountry }) => {
       <NextSeo title={name} />
 
       <section className="custom_max-width px-4 sm:px-10 lg:px-12">
-        <button className="element my-10 py-2 px-7 rounded-md shadow-custom">
+        <Button className="my-10">
           <Link href="/">
             <a className="flex items-center">
               {/* Arrow left icon */}
@@ -63,7 +64,7 @@ const Country = ({ country }: { country: TCountry }) => {
               <span className="ml-3">Back</span>
             </a>
           </Link>
-        </button>
+        </Button>
 
         <div className="xl:grid xl:grid-cols-2 xl:items-center">
           <div className="flex xl:mr-20">
