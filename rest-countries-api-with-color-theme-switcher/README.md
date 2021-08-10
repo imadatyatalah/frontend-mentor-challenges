@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/imadatyatalah/frontend-mentor-challenges/tree/main/rest-countries-api-with-color-theme-switcher)
+- [Solution URL](https://www.frontendmentor.io/solutions/built-using-nextjs-and-styled-with-tailwindcss-vfgAMHP_Z)
 - [Live Site URL](https://rest-countries-api-with-color-theme-switcher-nine.vercel.app/)
 
 ## My process
