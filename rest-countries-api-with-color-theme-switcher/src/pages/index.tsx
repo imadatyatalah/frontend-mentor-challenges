@@ -6,6 +6,7 @@ import useSWR from "swr";
 
 import { fetcher } from "@/utils/fetcher";
 import { Country } from "@/types/country";
+import FilterByRegion, { MenuItem } from "@/components/filterByRegion";
 import CountryCard from "@/components/countryCard";
 
 const Home = ({ countries }: { countries: Country[] }) => {
@@ -36,12 +37,14 @@ const Home = ({ countries }: { countries: Country[] }) => {
       <NextSeo title="Home" />
 
       <section className="">
-        <div className="mx-6 sm:mx-4">
-          <button onClick={() => setRegion("Africa")}>Africa</button>
-          <button onClick={() => setRegion("Europe")}>Europe</button>
-          <button onClick={() => setRegion("Asia")}>Asia</button>
-          <button onClick={() => setRegion("Americas")}>Americas</button>
-          <button onClick={() => setRegion("Oceania")}>Oceania</button>
+        <div className="mx-6 sm:mx-4 md:mx-10 lg:mx-12">
+          <FilterByRegion>
+            <MenuItem onClick={() => setRegion("Africa")}>Africa</MenuItem>
+            <MenuItem onClick={() => setRegion("Americas")}>America</MenuItem>
+            <MenuItem onClick={() => setRegion("Asia")}>Asia</MenuItem>
+            <MenuItem onClick={() => setRegion("Europe")}>Europe</MenuItem>
+            <MenuItem onClick={() => setRegion("Oceania")}>Oceania</MenuItem>
+          </FilterByRegion>
         </div>
 
         <div className="mx-12 sm:mx-8 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
