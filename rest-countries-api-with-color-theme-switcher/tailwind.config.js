@@ -1,5 +1,4 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
-
 const { fontFamily, boxShadow } = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -27,6 +26,8 @@ module.exports = {
     boxShadow: {
       ...boxShadow,
       custom: "0px 0px 5px 2.5px rgba(0,0,0,0.2)",
+      "lg-center":
+        "0 0px 25px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
     },
   },
   variants: {
