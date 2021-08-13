@@ -4,7 +4,7 @@
 // Mobile First
 
 // Hero Section
-.hero_container {
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,7 @@
 }
 
 @media only screen and (min-width: breakpoints.$breakpoint-laptop) {
-  .hero_container {
+  .hero {
     padding: 2.5rem 5rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -49,7 +49,7 @@
 }
 
 @media only screen and (min-width: breakpoints.$breakpoint-desktop) {
-  .hero_container {
+  .hero {
     &__info {
       h1 {
         font-size: 3.75rem;
@@ -64,8 +64,112 @@
   }
 }
 
+// Advanced Statistics
+.advanced_statistics {
+  text-align: center;
+  padding: 2rem 1rem 0 1rem;
+  background-color: #9e9aa733;
+
+  &__intro {
+    h2 {
+      padding-bottom: 1.75rem;
+      line-height: 0%;
+      color: colors.$very-dark-blue;
+    }
+
+    p {
+      color: colors.$grayish-violet;
+    }
+  }
+
+  &__cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    &__line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.75rem;
+      height: 80%;
+      background-color: colors.$cyan;
+    }
+
+    &__card {
+      position: relative;
+      background-color: white;
+      border-radius: 0.4rem;
+      padding: 2.75rem 1.5rem 1.75rem 1.5rem;
+      margin: 2rem 0;
+
+      div {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1rem;
+        margin-top: -2.8rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: colors.$dark-violet;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      h2 {
+        color: colors.$very-dark-blue;
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        color: colors.$grayish-violet;
+        font-size: 16px;
+      }
+    }
+
+    @media only screen and (min-width: breakpoints.$breakpoint-laptop) {
+      flex-direction: row;
+      padding: 3rem 3.25rem 8rem;
+
+      &__line {
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.75rem;
+        width: 80%;
+        transform: rotate(180deg);
+      }
+
+      &__card {
+        text-align: left;
+        margin: 0 0.75rem;
+
+        div {
+          left: 3.5rem;
+        }
+      }
+
+      &__card:nth-child(2) {
+        margin-top: 0;
+      }
+      &__card:nth-child(3) {
+        margin-top: 2.5rem;
+        margin-bottom: -2.5rem;
+      }
+      &__card:nth-child(4) {
+        margin-top: 5rem;
+        margin-bottom: -5rem;
+      }
+    }
+  }
+}
+
 // Sub Footer
-.sub_footer_container {
+.sub_footer {
   background-image: url("/bg/bg-boost-mobile.svg");
   background-color: colors.$dark-violet;
   background-repeat: no-repeat;
@@ -82,7 +186,7 @@
 }
 
 @media only screen and (min-width: breakpoints.$breakpoint-tablet) {
-  .sub_footer_container {
+  .sub_footer {
     background-image: url("/bg/bg-boost-desktop.svg");
     padding: 2.5rem 0;
 

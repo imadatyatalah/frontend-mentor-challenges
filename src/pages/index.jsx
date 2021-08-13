@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import { NextSeo } from "next-seo";
 
+import Statistics from "../components/statistics";
+
 import styles from "../styles/pages/home.module.scss";
 
 const Home = () => {
@@ -11,8 +13,8 @@ const Home = () => {
       <NextSeo title="Frontend Mentor | Shortly URL shortening API Challenge" />
 
       {/* Hero Section */}
-      <section className={styles.hero_container}>
-        <div className={styles.hero_container__img}>
+      <section className={styles.hero}>
+        <div className={styles.hero__img}>
           <Image
             src="/illustrations/illustration-working.svg"
             width="733"
@@ -23,7 +25,7 @@ const Home = () => {
           />
         </div>
 
-        <div className={styles.hero_container__info}>
+        <div className={styles.hero__info}>
           <h1>More than just shorter links</h1>
 
           <p>
@@ -35,7 +37,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.sub_footer_container}>
+      <Statistics />
+
+      <section className={styles.sub_footer}>
         <div>
           <h2>Boost your links today</h2>
 
