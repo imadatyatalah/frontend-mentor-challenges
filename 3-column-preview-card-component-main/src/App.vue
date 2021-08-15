@@ -98,6 +98,8 @@ export default {
 }
 .cards {
   display: flex;
+  align-items: center;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
