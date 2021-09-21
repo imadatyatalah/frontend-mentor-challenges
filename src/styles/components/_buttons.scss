@@ -1,3 +1,4 @@
+@use "../abstracts/breakpoints";
 @use "../abstracts/colors";
 @use "../abstracts/fonts";
 
@@ -16,7 +17,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: breakpoints.$breakpoint-tablet) {
   .primary_btn {
     &:hover {
       opacity: 100%;

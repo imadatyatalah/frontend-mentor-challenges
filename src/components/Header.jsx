@@ -42,7 +42,6 @@ const Header = () => {
           </li>
         </ul>
 
-        {/* Call To Actions */}
         <div className="header__cta-container">
           <Link href="/#">
             <a className="header__link" style={{ display: "inline-block" }}>

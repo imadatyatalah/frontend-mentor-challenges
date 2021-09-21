@@ -5,16 +5,14 @@ import SEO from "../../next-seo.config";
 
 import "../styles/main.scss";
 
-const MyApp = ({ Component, pageProps }) => {
-  return (
-    <>
-      <DefaultSeo {...SEO} />
+const MyApp = ({ Component, pageProps }) => (
+  <>
+    <DefaultSeo {...SEO} />
 
-      <Global>
-        <Component {...pageProps} />
-      </Global>
-    </>
-  );
-};
+    <Global>
+      <Component {...pageProps} />
+    </Global>
+  </>
+);
 
 export default MyApp;
