@@ -65,7 +65,7 @@ const Footer = () => (
 
     <div className="footer__social-media">
       {socialMediaLinks.map(({ image, name }) => (
-        <Link href="/#">
+        <Link href="/#" key={name}>
           <a>
             <Image
               src={image}
