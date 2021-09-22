@@ -7,7 +7,9 @@
 }
 
 html,
-body {
+body,
+button,
+input {
   font-size: fonts.$text-lg;
   font-family: fonts.$font-poppins;
   letter-spacing: 0.02em;
