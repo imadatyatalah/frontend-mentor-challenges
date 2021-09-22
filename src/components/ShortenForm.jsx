@@ -25,6 +25,7 @@ const ShortenForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = async ({ link }) => {
@@ -45,6 +46,7 @@ const ShortenForm = () => {
         ]);
 
         setError(null);
+        reset();
       } else {
         setError(data);
       }
