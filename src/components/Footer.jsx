@@ -30,53 +30,71 @@ const socialMediaLinks = [
 ];
 
 const Footer = () => (
-  <footer className="footer">
-    <div className="footer__logo-container">
-      <Link href="/">
-        <a>
-          <Image
-            src="/logo-white.svg"
-            width="121"
-            height="33"
-            alt="shortly logo"
-            title="Shortly Logo"
-          />
-        </a>
-      </Link>
-    </div>
-
-    <div className="footer__container">
-      {links.map(({ title, links }) => (
-        <div className="footer__container__links" key={title}>
-          <h3>{title}</h3>
-
-          <ul>
-            {links.map((link) => (
-              <li key={link}>
-                <Link href="/#">
-                  <a>{link}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-
-    <div className="footer__social-media">
-      {socialMediaLinks.map(({ image, name }) => (
-        <Link href="/#" key={name}>
+  <>
+    <footer className="footer">
+      <div className="footer__logo-container">
+        <Link href="/">
           <a>
             <Image
-              src={image}
-              alt={`${name} account`}
-              title={`${name} account`}
+              src="/logo-white.svg"
+              width="121"
+              height="33"
+              alt="shortly logo"
+              title="Shortly Logo"
             />
           </a>
         </Link>
-      ))}
+      </div>
+
+      <div className="footer__container">
+        {links.map(({ title, links }) => (
+          <div className="footer__container__links" key={title}>
+            <h3>{title}</h3>
+
+            <ul>
+              {links.map((link) => (
+                <li key={link}>
+                  <Link href="/#">
+                    <a>{link}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <div className="footer__social-media">
+        {socialMediaLinks.map(({ image, name }) => (
+          <Link href="/#" key={name}>
+            <a>
+              <Image
+                src={image}
+                alt={`${name} account`}
+                title={`${name} account`}
+              />
+            </a>
+          </Link>
+        ))}
+      </div>
+    </footer>
+
+    <div className="attribution">
+      Challenge by{" "}
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      . Coded by{" "}
+      <a
+        href="https://github.com/imadatyatalah"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Imad Atyat-Alah
+      </a>
+      .
     </div>
-  </footer>
+  </>
 );
 
 export default Footer;
