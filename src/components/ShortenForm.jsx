@@ -15,7 +15,7 @@ const ShortenForm = () => {
   });
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const clipboard = useClipboard();
+  const clipboard = useClipboard({ copiedTimeout: 2000 });
 
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(links));
@@ -112,9 +112,13 @@ const ShortenForm = () => {
 
                   <button
                     onClick={() => clipboard.copy(full_short_link)}
-                    className="primary_btn"
+                    className={`primary_btn ${
+                      clipboard.copied
+                        ? styles.shorten__primary_btn_copied
+                        : null
+                    }`}
                   >
-                    Copy
+                    {clipboard.copied ? "Copied!" : "Copy"}
                   </button>
                 </div>
               </div>

@@ -119,6 +119,10 @@
       border-radius: 0.5rem;
       width: 100%;
     }
+
+    &__primary_btn_copied {
+      background-color: colors.$dark-violet;
+    }
   }
 }
 
@@ -186,41 +190,6 @@
       p {
         color: colors.$grayish-violet;
         font-size: 16px;
-      }
-    }
-
-    @media only screen and (min-width: breakpoints.$breakpoint-laptop) {
-      flex-direction: row;
-      padding: 3rem 3.25rem 8rem;
-
-      &__line {
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        height: 0.75rem;
-        width: 80%;
-        transform: rotate(180deg);
-      }
-
-      &__card {
-        text-align: left;
-        margin: 0 0.75rem;
-
-        div {
-          left: 3.5rem;
-        }
-      }
-
-      &__card:nth-child(2) {
-        margin-top: 0;
-      }
-      &__card:nth-child(3) {
-        margin-top: 2.5rem;
-        margin-bottom: -2.5rem;
-      }
-      &__card:nth-child(4) {
-        margin-top: 5rem;
-        margin-bottom: -5rem;
       }
     }
   }
@@ -344,6 +313,41 @@
     &__intro {
       p {
         padding: 0 4rem;
+      }
+    }
+
+    &__cards {
+      flex-direction: row;
+      padding: 3rem 3.25rem 8rem;
+
+      &__line {
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.75rem;
+        width: 80%;
+        transform: rotate(180deg);
+      }
+
+      &__card {
+        text-align: left;
+        margin: 0 0.75rem;
+
+        div {
+          left: 3.5rem;
+        }
+      }
+
+      &__card:nth-child(2) {
+        margin-top: 0;
+      }
+      &__card:nth-child(3) {
+        margin-top: 2.5rem;
+        margin-bottom: -2.5rem;
+      }
+      &__card:nth-child(4) {
+        margin-top: 5rem;
+        margin-bottom: -5rem;
       }
     }
   }
