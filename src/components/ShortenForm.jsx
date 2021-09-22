@@ -54,31 +54,65 @@ const ShortenForm = () => {
   };
 
   return (
-    <section className={styles.form}>
-      <div className={styles.form__container}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
-            <input
-              id="link"
-              type="text"
-              placeholder="Shorten a link here..."
-              className={errors.link || error ? styles.input_error : null}
-              {...register("link", { required: "Please add a link" })}
-            />
+    <>
+      <section className={styles.form}>
+        <div className={styles.form__container}>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div>
+              <input
+                id="link"
+                type="text"
+                placeholder="Shorten a link here..."
+                className={errors.link || error ? styles.input_error : null}
+                {...register("link", { required: "Please add a link" })}
+              />
 
-            {errors.link ? (
-              <p className={styles.error_text}>{errors.link.message}</p>
-            ) : (
-              error && <p className={styles.error_text}>{error.error}</p>
-            )}
-          </div>
+              {errors.link ? (
+                <p className={styles.error_text}>{errors.link.message}</p>
+              ) : (
+                error && <p className={styles.error_text}>{error.error}</p>
+              )}
+            </div>
 
-          <button className="primary_btn" type="submit" disabled={loading}>
-            {loading ? "loading..." : "Shorten It!"}
-          </button>
-        </form>
+            <button className="primary_btn" type="submit" disabled={loading}>
+              {loading ? "loading..." : "Shorten It!"}
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <div className={styles.shorten__container}>
+        {links.length
+          ? links.map(({ original_link, full_short_link }, index) => (
+              <div className={styles.shorten} key={index}>
+                <a
+                  href={original_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.shorten__original_link}
+                >
+                  {original_link}
+                </a>
+
+                <hr />
+
+                <div>
+                  <a
+                    href={full_short_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.shorten__full_short_link}
+                  >
+                    {full_short_link}
+                  </a>
+
+                  <button className="primary_btn">Copy</button>
+                </div>
+              </div>
+            ))
+          : null}
       </div>
-    </section>
+    </>
   );
 };
 
