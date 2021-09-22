@@ -13,6 +13,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.15.4",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "use-clipboard-copy": "^0.2.0"
   }
 }

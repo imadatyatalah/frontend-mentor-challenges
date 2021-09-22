@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { useForm } from "react-hook-form";
+import { useClipboard } from "use-clipboard-copy";
 
 import styles from "../styles/pages/home.module.scss";
 
@@ -14,6 +15,7 @@ const ShortenForm = () => {
   });
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const clipboard = useClipboard();
 
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(links));
@@ -106,7 +108,12 @@ const ShortenForm = () => {
                     {full_short_link}
                   </a>
 
-                  <button className="primary_btn">Copy</button>
+                  <button
+                    onClick={() => clipboard.copy(full_short_link)}
+                    className="primary_btn"
+                  >
+                    Copy
+                  </button>
                 </div>
               </div>
             ))
