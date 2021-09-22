@@ -15,7 +15,6 @@ const ShortenForm = () => {
   });
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const clipboard = useClipboard({ copiedTimeout: 2000 });
 
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(links));
@@ -87,42 +86,46 @@ const ShortenForm = () => {
 
       <div className={styles.shorten__container}>
         {links.length
-          ? links.map(({ original_link, full_short_link }, index) => (
-              <div className={styles.shorten} key={index}>
-                <a
-                  href={original_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.shorten__original_link}
-                >
-                  {original_link}
-                </a>
+          ? links.map(({ original_link, full_short_link }, index) => {
+              const clipboard = useClipboard({ copiedTimeout: 2000 });
 
-                <hr />
-
-                <div>
+              return (
+                <div className={styles.shorten} key={index}>
                   <a
-                    href={full_short_link}
+                    href={original_link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={styles.shorten__full_short_link}
+                    className={styles.shorten__original_link}
                   >
-                    {full_short_link}
+                    {original_link}
                   </a>
 
-                  <button
-                    onClick={() => clipboard.copy(full_short_link)}
-                    className={`primary_btn ${
-                      clipboard.copied
-                        ? styles.shorten__primary_btn_copied
-                        : null
-                    }`}
-                  >
-                    {clipboard.copied ? "Copied!" : "Copy"}
-                  </button>
+                  <hr />
+
+                  <div>
+                    <a
+                      href={full_short_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.shorten__full_short_link}
+                    >
+                      {full_short_link}
+                    </a>
+
+                    <button
+                      onClick={() => clipboard.copy(full_short_link)}
+                      className={`primary_btn ${
+                        clipboard.copied
+                          ? styles.shorten__primary_btn_copied
+                          : null
+                      }`}
+                    >
+                      {clipboard.copied ? "Copied!" : "Copy"}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           : null}
       </div>
     </>
