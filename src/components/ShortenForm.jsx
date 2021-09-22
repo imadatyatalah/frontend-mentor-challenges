@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useForm } from "react-hook-form";
 
 import styles from "../styles/pages/home.module.scss";
 
 const ShortenForm = () => {
-  const [links, setLinks] = useState([]);
+  const [links, setLinks] = useState(() => {
+    const localData =
+      typeof window !== "undefined" &&
+      JSON.parse(localStorage.getItem("links"));
+
+    return localData ? localData : [];
+  });
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("links", JSON.stringify(links));
+  }, [links]);
 
   const {
     register,
