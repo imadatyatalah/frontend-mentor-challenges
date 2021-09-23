@@ -1,0 +1,12 @@
+.layoutContainer {
+  background-image: url("/images/mobile/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  .layoutContainer {
+    background-image: url("/images/desktop/image-hero.jpg");
+  }
+}
