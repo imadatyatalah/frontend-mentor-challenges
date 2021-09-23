@@ -8,11 +8,11 @@ export default {
 };
 
 export const links = [
-  { title: "About", href: "/about" },
-  { title: "Careers", href: "/careers" },
-  { title: "Events", href: "/events" },
-  { title: "Products", href: "/products" },
-  { title: "Support", href: "/support" },
+  { title: "About", href: "/#" },
+  { title: "Careers", href: "/#" },
+  { title: "Events", href: "/#" },
+  { title: "Products", href: "/#" },
+  { title: "Support", href: "/#" },
 ];
 
 export const ourCreations = [
@@ -55,36 +55,5 @@ export const ourCreations = [
     title: "Make it fisheye",
     imgSrcMobile: "/images/mobile/image-fisheye.jpg",
     imgSrcDesktop: "/images/desktop/image-fisheye.jpg",
-  },
-];
-
-export const social = [
-  {
-    imgSrc: "/images/icon-facebook.svg",
-    title: "facebook-icon",
-    name: "facebook",
-    width: "24",
-    height: "24",
-  },
-  {
-    imgSrc: "/images/icon-twitter.svg",
-    title: "twitter-icon",
-    name: "twitter",
-    width: "24",
-    height: "20",
-  },
-  {
-    imgSrc: "/images/icon-pinterest.svg",
-    title: "pinterest-icon",
-    name: "pinterest",
-    width: "24",
-    height: "24",
-  },
-  {
-    imgSrc: "/images/icon-instagram.svg",
-    title: "instagram-icon",
-    name: "instagram",
-    width: "24",
-    height: "24",
   },
 ];
