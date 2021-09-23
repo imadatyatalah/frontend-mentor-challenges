@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/built-using-nextjs-q3hMk_q3d)
-- Live Site URL: [Add live site URL here](https://url-shortening-api-imadatyatalah.vercel.app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/built-using-nextjs-q3hMk_q3d)
+- [Live Site URL](https://url-shortening-api-imadatyatalah.vercel.app/)
 
 ## My process
 

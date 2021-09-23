@@ -6,3 +6,4 @@
 - [x] [3-column-preview-card-component-main](https://3-column-preview-card-component-main-swart.vercel.app/)
 - [x] [testimonials-grid-section-main](https://testimonials-grid-section-main-azure-omega.vercel.app/)
 - [x] [social-proof-section-master](https://social-proof-section-master-nine.netlify.app/)
+- [x] [url-shortening-api](https://url-shortening-api-imadatyatalah.vercel.app/)
