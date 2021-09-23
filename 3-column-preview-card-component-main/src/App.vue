@@ -171,7 +171,7 @@ export default {
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin: 20px;
+  padding: 20px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);

@@ -7,3 +7,4 @@
 - [x] [testimonials-grid-section-main](https://testimonials-grid-section-main-imadatyatalah.netlify.app/)
 - [x] [social-proof-section-master](https://social-proof-section-master-nine.netlify.app/)
 - [x] [url-shortening-api](https://url-shortening-api-imadatyatalah.vercel.app/)
+- [x] [loopstudios-landing-page](https://loopstudios-landing-page-zeta.vercel.app/)
