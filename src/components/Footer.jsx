@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { LogoWhite } from "./Logo";
+
 import facebookIcon from "../../public/icons/icon-facebook.svg";
 import twitterIcon from "../../public/icons/icon-twitter.svg";
 import pinterestIcon from "../../public/icons/icon-pinterest.svg";
@@ -35,13 +37,7 @@ const Footer = () => (
       <div className="footer__logo-container">
         <Link href="/">
           <a>
-            <Image
-              src="/logo-white.svg"
-              width="121"
-              height="33"
-              alt="shortly logo"
-              title="Shortly Logo"
-            />
+            <LogoWhite />
           </a>
         </Link>
       </div>

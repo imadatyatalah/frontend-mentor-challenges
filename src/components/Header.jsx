@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+
+import { Logo } from "./Logo";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -12,13 +13,7 @@ const Header = () => {
       <div>
         <Link href="/">
           <a className="header__logo">
-            <Image
-              src="/logo.svg"
-              width="121"
-              height="33"
-              alt="shortly logo"
-              title="Shortly Logo"
-            />
+            <Logo />
           </a>
         </Link>
       </div>
