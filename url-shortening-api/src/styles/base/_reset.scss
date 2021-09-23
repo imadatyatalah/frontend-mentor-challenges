@@ -1,0 +1,38 @@
+@use "../abstracts/fonts";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+button,
+input {
+  font-size: fonts.$text-lg;
+  font-family: fonts.$font-poppins;
+  letter-spacing: 0.02em;
+}
+
+main,
+header,
+footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+button:disabled,
+button:disabled:hover {
+  cursor: not-allowed;
+  opacity: 60%;
+}
+
+a {
+  text-decoration: none;
+}

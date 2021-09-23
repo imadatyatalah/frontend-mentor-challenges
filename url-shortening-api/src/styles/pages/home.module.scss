@@ -1,0 +1,370 @@
+@use "../abstracts/colors";
+@use "../abstracts/breakpoints";
+
+// Mobile First
+
+// Hero Section
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 7rem;
+
+  &__info {
+    h1 {
+      font-size: 36px;
+      line-height: 45px;
+      color: colors.$very-dark-violet;
+    }
+
+    p {
+      color: colors.$grayish-violet;
+      padding: 0.25rem 1rem 1.25rem;
+    }
+  }
+}
+
+// Form
+.form {
+  position: relative;
+  margin: 0 2rem;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      background: colors.$dark-violet;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-image: url("/bg/bg-shorten-mobile.svg");
+      background-repeat: no-repeat;
+      background-position: top right;
+
+      div {
+        margin-bottom: 1rem;
+        text-align: left;
+
+        input {
+          padding: 0.75rem;
+          font-size: 18px;
+          border-radius: 0.5rem;
+          border: none;
+          width: 100%;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
+        .input_error {
+          color: colors.$red;
+          border: 3px solid colors.$red;
+        }
+
+        .error_text {
+          margin-top: 0.2rem;
+          color: colors.$red;
+        }
+      }
+
+      button {
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}
+
+.shorten__container {
+  padding: 6rem 2rem 1rem;
+  background-color: #9e9aa733;
+
+  .shorten {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    &__original_link {
+      color: colors.$dark-violet;
+      display: block;
+      padding-bottom: 0.5rem;
+    }
+
+    hr {
+      color: colors.$gray;
+      opacity: 40%;
+    }
+
+    &__full_short_link {
+      color: colors.$cyan;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    button {
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    &__primary_btn_copied {
+      background-color: colors.$dark-violet;
+    }
+  }
+}
+
+// Advanced Statistics
+.advanced_statistics {
+  text-align: center;
+  padding: 1rem 1rem 0 1rem;
+  background-color: #9e9aa733;
+
+  &__intro {
+    h2 {
+      padding-bottom: 1.75rem;
+      line-height: 0%;
+      color: colors.$very-dark-blue;
+    }
+
+    p {
+      color: colors.$grayish-violet;
+    }
+  }
+
+  &__cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    &__line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.75rem;
+      height: 80%;
+      background-color: colors.$cyan;
+    }
+
+    &__card {
+      position: relative;
+      background-color: white;
+      border-radius: 0.4rem;
+      padding: 2.75rem 1.5rem 1.75rem 1.5rem;
+      margin: 2rem 0;
+
+      div {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1rem;
+        margin-top: -2.8rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: colors.$dark-violet;
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      h2 {
+        color: colors.$very-dark-blue;
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        color: colors.$grayish-violet;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// Sub Footer
+.sub_footer {
+  background-image: url("/bg/bg-boost-mobile.svg");
+  background-color: colors.$dark-violet;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+
+  color: white;
+  padding: 4rem 0;
+
+  text-align: center;
+
+  h2 {
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$breakpoint-tablet) {
+  .sub_footer {
+    background-image: url("/bg/bg-boost-desktop.svg");
+    padding: 2.5rem 0;
+
+    h2 {
+      padding-bottom: 1rem;
+      font-size: 36px;
+    }
+  }
+}
+
+@media only screen and (min-width: breakpoints.$breakpoint-laptop) {
+  .hero {
+    padding: 2.5rem 5rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: left;
+
+    &__info {
+      grid-row-start: 1;
+
+      h1 {
+        font-size: 2.5rem;
+        line-height: 55px;
+      }
+
+      p {
+        padding: 0 2.5rem 1.5rem 0;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .form {
+    margin: 0 5rem;
+
+    &__container {
+      form {
+        flex-direction: row;
+        align-items: flex-start;
+        background-image: url("/bg/bg-shorten-desktop.svg");
+        background-size: cover;
+        padding: 2.5rem;
+
+        div {
+          margin-right: 1rem;
+          margin-bottom: 0;
+          width: 100%;
+
+          .input_error {
+            padding: 0.65rem 0.75rem;
+          }
+        }
+
+        button {
+          width: 10rem;
+          padding: 0.75rem;
+        }
+      }
+    }
+  }
+
+  .shorten__container {
+    padding: 6rem 5rem 1rem;
+
+    .shorten {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__original_link {
+        padding: 0;
+      }
+
+      hr {
+        display: none;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        &__full_short_link {
+        }
+      }
+
+      button {
+        width: auto;
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .advanced_statistics {
+    padding: 2.5rem 1rem 0 1rem;
+
+    &__intro {
+      p {
+        padding: 0 4rem;
+      }
+    }
+
+    &__cards {
+      flex-direction: row;
+      padding: 3rem 3.25rem 8rem;
+
+      &__line {
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.75rem;
+        width: 80%;
+        transform: rotate(180deg);
+      }
+
+      &__card {
+        text-align: left;
+        margin: 0 0.75rem;
+
+        div {
+          left: 3.5rem;
+        }
+      }
+
+      &__card:nth-child(2) {
+        margin-top: 0;
+      }
+      &__card:nth-child(3) {
+        margin-top: 2.5rem;
+        margin-bottom: -2.5rem;
+      }
+      &__card:nth-child(4) {
+        margin-top: 5rem;
+        margin-bottom: -5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: breakpoints.$breakpoint-desktop) {
+  .hero {
+    &__info {
+      h1 {
+        font-size: 3.75rem;
+        line-height: 85px;
+      }
+
+      p {
+        padding-right: 3rem;
+        line-height: 32.5px;
+      }
+    }
+  }
+}

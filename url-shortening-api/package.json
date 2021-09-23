@@ -1,0 +1,19 @@
+{
+  "name": "url-shortening-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "11.1.2",
+    "next-seo": "^4.28.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.15.4",
+    "sass": "^1.42.1",
+    "use-clipboard-copy": "^0.2.0"
+  }
+}
