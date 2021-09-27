@@ -9,13 +9,14 @@ import useSWR from "swr";
 
 import { fetcher } from "@/utils/fetcher";
 import { Country as TCountry } from "@/types/country";
+import { ArrowLeft } from "@/components/icons/arrows";
 import Button from "@/components/button";
 
 const Country = ({ country }: { country: TCountry }) => {
   const { query, isFallback } = useRouter();
 
   const { data } = useSWR<TCountry>(
-    `https://restcountries.eu/rest/v2/alpha/${query?.country}`,
+    `https://restcountries.com/v2/alpha/${query?.country}`,
     fetcher,
     { initialData: country }
   );
@@ -24,10 +25,10 @@ const Country = ({ country }: { country: TCountry }) => {
 
   const {
     name,
-    flag,
+    flags,
     demonym,
     population,
-    subregion,
+    continent,
     region,
     capital,
     nativeName,
@@ -45,21 +46,7 @@ const Country = ({ country }: { country: TCountry }) => {
         <Button className="my-10">
           <Link href="/">
             <a className="flex items-center">
-              {/* Arrow left icon */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-              </svg>
+              <ArrowLeft />
 
               <span className="ml-3">Back</span>
             </a>
@@ -69,7 +56,7 @@ const Country = ({ country }: { country: TCountry }) => {
         <div className="xl:grid xl:grid-cols-2 xl:items-center">
           <div className="flex xl:mr-20">
             <Image
-              src={flag}
+              src={flags[0]}
               width="700"
               height="500"
               alt={`${demonym} flag`}
@@ -91,11 +78,11 @@ const Country = ({ country }: { country: TCountry }) => {
                 </li>
                 <li className="font-light py-px">
                   <span className="font-semibold">Region: </span>
-                  {region}
+                  {continent}
                 </li>
                 <li className="font-light py-px">
                   <span className="font-semibold">Sub Region: </span>
-                  {subregion}
+                  {region}
                 </li>
                 <li className="font-light py-px">
                   <span className="font-semibold">Capital: </span>
@@ -155,7 +142,7 @@ export const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext) => {
   const country = await fetcher(
-    `https://restcountries.eu/rest/v2/alpha/${params?.country}`
+    `https://restcountries.com/v2/alpha/${params?.country}`
   );
 
   return { props: { country } };

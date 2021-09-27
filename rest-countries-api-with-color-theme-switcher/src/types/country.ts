@@ -24,8 +24,6 @@ type Translations = {
 type RegionalBlocs = {
   acronym: string;
   name: string;
-  otherAcronyms: string[];
-  otherNames: string[];
 };
 
 export type Country = {
@@ -37,7 +35,7 @@ export type Country = {
   capital: string;
   altSpellings: string[];
   region: string;
-  subregion: string;
+  continent: string;
   population: number;
   latlng: number[];
   demonym: string;
@@ -50,7 +48,8 @@ export type Country = {
   currencies: Currencies[];
   languages: Language[];
   translations: Translations;
-  flag: string;
+  flags: string[];
   regionalBlocs: RegionalBlocs[];
   cioc: string;
+  independent: boolean;
 };

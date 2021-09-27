@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Country } from "@/types/country";
 
 const CountryCard = ({ country }: { country: Country }) => {
-  const { name, flag, demonym, population, region, capital, alpha3Code } =
+  const { name, flags, demonym, population, continent, capital, alpha3Code } =
     country;
 
   return (
@@ -14,7 +14,7 @@ const CountryCard = ({ country }: { country: Country }) => {
         <Link href={`/${alpha3Code}`}>
           <a>
             <Image
-              src={flag}
+              src={flags[0]}
               width="700"
               height="500"
               alt={`${demonym} flag`}
@@ -38,7 +38,7 @@ const CountryCard = ({ country }: { country: Country }) => {
           </li>
           <li className="font-light py-px">
             <span className="font-semibold">Region: </span>
-            {region}
+            {continent}
           </li>
           <li className="font-light py-px">
             <span className="font-semibold">Capital: </span>

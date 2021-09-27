@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import { useTheme } from "next-themes";
+import { Moon, MoonOutline } from "../icons/moon";
 
 const Header = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -29,17 +29,12 @@ const Header = () => {
         >
           {resolvedTheme === "light" ? (
             <>
-              <Image
-                src="/moon-outline.svg"
-                width="20"
-                height="20"
-                alt="Moon icon"
-              />
+              <MoonOutline />
               <span className="pl-2">Dark Mode</span>
             </>
           ) : (
             <>
-              <Image src="/moon.svg" width="20" height="20" alt="Moon icon" />
+              <Moon />
               <span className="pl-2">Light Mode</span>
             </>
           )}

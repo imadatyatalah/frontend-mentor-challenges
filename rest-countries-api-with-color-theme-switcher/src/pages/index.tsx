@@ -9,6 +9,15 @@ import { Country } from "@/types/country";
 import FilterByRegion, { MenuItem } from "@/components/filterByRegion";
 import CountryCard from "@/components/countryCard";
 import Button from "@/components/button";
+import Search from "@/components/icons/search";
+
+const REGIONS = [
+  { region: "Africa", title: "Africa" },
+  { region: "Americas", title: "America" },
+  { region: "Asia", title: "Asia" },
+  { region: "Europe", title: "Europe" },
+  { region: "Oceania", title: "Oceania" },
+];
 
 const Home = ({ countries }: { countries: Country[] }) => {
   const [page, setPage] = useState(1);
@@ -16,7 +25,7 @@ const Home = ({ countries }: { countries: Country[] }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const { data } = useSWR<Country[]>(
-    "https://restcountries.eu/rest/v2/all",
+    "https://restcountries.com/v2/all",
     fetcher,
     { initialData: countries }
   );
@@ -26,7 +35,7 @@ const Home = ({ countries }: { countries: Country[] }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const filteredData = useMemo(() => {
     if (region) {
-      return data.filter((country) => country.region === region);
+      return data.filter((country) => country.continent === region);
     }
 
     if (searchValue) {
@@ -50,23 +59,10 @@ const Home = ({ countries }: { countries: Country[] }) => {
     <>
       <NextSeo title="Home" />
 
-      <section className="">
+      <section>
         <div className="mx-6 flex flex-col sm:mx-4 sm:flex-row sm:justify-between sm:items-center md:mx-10 lg:mx-12">
           <div className="mt-8 py-1 relative flex items-center w-full sm:w-6/12 lg:w-5/12">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-8 absolute text-dark-gray dark:text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
+            <Search />
 
             <input
               type="text"
@@ -79,11 +75,11 @@ const Home = ({ countries }: { countries: Country[] }) => {
           </div>
 
           <FilterByRegion>
-            <MenuItem onClick={() => setRegion("Africa")}>Africa</MenuItem>
-            <MenuItem onClick={() => setRegion("Americas")}>America</MenuItem>
-            <MenuItem onClick={() => setRegion("Asia")}>Asia</MenuItem>
-            <MenuItem onClick={() => setRegion("Europe")}>Europe</MenuItem>
-            <MenuItem onClick={() => setRegion("Oceania")}>Oceania</MenuItem>
+            {REGIONS.map(({ region, title }) => (
+              <MenuItem onClick={() => setRegion(region)} key={region}>
+                {title}
+              </MenuItem>
+            ))}
           </FilterByRegion>
         </div>
 
@@ -113,7 +109,7 @@ const Home = ({ countries }: { countries: Country[] }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   // TODO: Fetch just necessary data
-  const countries = await fetcher("https://restcountries.eu/rest/v2/all");
+  const countries = await fetcher("https://restcountries.com/v2/all");
 
   return { props: { countries } };
 };

@@ -1,3 +1,3 @@
 module.exports = {
-  images: { domains: ["restcountries.eu"] },
+  images: { domains: ["restcountries.com"] },
 };
