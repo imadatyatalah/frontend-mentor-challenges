@@ -22,6 +22,41 @@
   --pale-blue: hsl(236, 100%, 87%);
 }
 
+.task {
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.work-task {
+  @apply bg-light-red-orange;
+  background-image: url("/icon-work.svg");
+}
+
+.play-task {
+  @apply bg-soft-blue;
+  background-image: url("/icon-play.svg");
+}
+
+.study-task {
+  @apply bg-light-red;
+  background-image: url("/icon-study.svg");
+}
+
+.exercise-task {
+  @apply bg-lime-green;
+  background-image: url("/icon-exercise.svg");
+}
+
+.social-task {
+  @apply bg-custom-violet;
+  background-image: url("/icon-social.svg");
+}
+
+.self-care-task {
+  @apply bg-soft-orange;
+  background-image: url("/icon-self-care.svg");
+}
+
 .attribution {
   padding: 20px;
   color: white;
