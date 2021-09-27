@@ -55,7 +55,7 @@ const Card = ({ currentTimeframe, data }) => {
 
   return (
     <div
-      className={`${bgColor} my-6 text-white pt-12 rounded-xl lg:my-0`}
+      className={`${bgColor} my-6 text-white pt-12 rounded-xl sm:my-0`}
       style={{
         backgroundImage: `url(${bgIcon})`,
         backgroundRepeat: "no-repeat",
@@ -76,13 +76,13 @@ const Card = ({ currentTimeframe, data }) => {
             <path
               d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
               fill="#BBC0FF"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </div>
 
-        <div className="flex items-center justify-between lg:flex-col lg:items-start lg:mt-2">
-          <p className="text-3xl font-light lg:mb-1">
+        <div className="flex items-center justify-between sm:flex-col sm:items-start sm:mt-2">
+          <p className="text-4xl font-light sm:mb-1">
             {timeframes[currentTimeframe].current}hrs
           </p>
 

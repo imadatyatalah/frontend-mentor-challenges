@@ -12,8 +12,8 @@ const App = () => {
 
   return (
     <main className="tracking-wide bg-very-dark-blue max-w-[1440px] mx-auto lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
-      <section className="px-6 py-14 md:px-28 lg:grid lg:grid-cols-4 lg:grid-rows-2 lg:gap-5 lg:items-center">
-        <div className="lg:row-start-1 lg:row-end-3">
+      <section className="px-6 py-14 sm:grid sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 lg:items-center">
+        <div className="sm:col-start-1 sm:col-end-3 md:col-end-4 lg:col-auto lg:row-start-1 lg:row-end-3">
           <div className="relative z-10 flex items-center justify-center p-6 bg-custom-blue rounded-xl lg:flex-col lg:items-start">
             <img
               src={ProfileImg}
@@ -35,7 +35,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="flex justify-between p-6 pt-10 -mt-4 text-white bg-dark-blue rounded-b-xl lg:flex-col lg:py-2 lg:pt-6">
+          <div className="flex justify-between p-6 pt-10 -mt-4 text-white bg-dark-blue rounded-b-xl lg:block lg:py-2 lg:pt-6">
             {TIMEFRAMES.map((tf) => {
               let timeframeOpacity;
 
@@ -45,7 +45,7 @@ const App = () => {
 
               return (
                 <button
-                  className={`${timeframeOpacity} text-left capitalize my-1`}
+                  className={`${timeframeOpacity} capitalize lg:block lg:text-left lg:my-2`}
                   onClick={() => setTimeframe(tf)}
                   key={tf}
                 >
@@ -61,7 +61,7 @@ const App = () => {
         ))}
       </section>
 
-      <div class="attribution">
+      <div className="attribution">
         Challenge by{" "}
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
