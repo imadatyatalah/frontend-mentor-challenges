@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <main className="tracking-wide bg-very-dark-blue max-w-[1440px] mx-auto lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
-      <section className="px-6 py-14 sm:grid sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 lg:items-center">
+      <section className="px-6 py-14 sm:grid sm:grid-cols-2 sm:gap-5 md:grid-cols-3 lg:grid-cols-4 lg:grid-rows-2 lg:items-center lg:px-20 xl:px-36">
         <div className="sm:col-start-1 sm:col-end-3 md:col-end-4 lg:col-auto lg:row-start-1 lg:row-end-3">
           <div className="relative z-10 flex items-center justify-center p-6 bg-custom-blue rounded-xl lg:flex-col lg:items-start">
             <img
