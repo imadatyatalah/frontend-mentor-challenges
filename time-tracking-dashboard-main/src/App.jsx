@@ -35,7 +35,7 @@ const App = () => {
             </div>
           </div>
 
-          <ul className="flex justify-between p-6 pt-10 -mt-4 text-white bg-dark-blue rounded-b-xl lg:flex-col lg:py-2 lg:pt-6">
+          <div className="flex justify-between p-6 pt-10 -mt-4 text-white bg-dark-blue rounded-b-xl lg:flex-col lg:py-2 lg:pt-6">
             {TIMEFRAMES.map((tf) => {
               let timeframeOpacity;
 
@@ -44,16 +44,16 @@ const App = () => {
                 : (timeframeOpacity = "text-desaturated-blue hover:text-white");
 
               return (
-                <li
-                  className={`${timeframeOpacity} capitalize cursor-pointer my-1`}
+                <button
+                  className={`${timeframeOpacity} text-left capitalize my-1`}
                   onClick={() => setTimeframe(tf)}
                   key={tf}
                 >
                   {tf}
-                </li>
+                </button>
               );
             })}
-          </ul>
+          </div>
         </div>
 
         {cards.map((card) => (

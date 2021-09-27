@@ -67,7 +67,8 @@ const Card = ({ currentTimeframe, data }) => {
           <h2 className="text-lg font-medium">{title}</h2>
 
           <svg
-            className="opacity-75 cursor-pointer lg:hover:opacity-100"
+            aria-hidden="true"
+            className="cursor-pointer opacity-80 lg:hover:opacity-100"
             width="21"
             height="5"
             xmlns="http://www.w3.org/2000/svg"
