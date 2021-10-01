@@ -5,8 +5,8 @@ import Nav from "../nav";
 import Social from "./social";
 
 const Footer = () => (
-  <footer className="font-Alata bg-black text-white text-center md:py-7">
-    <div className="container md:px-8 lg:px-12 xl:px-16 2xl:px-20 md:flex md:justify-between md:items-start">
+  <footer className="container font-Alata bg-black text-white text-center md:py-7">
+    <div className="md:px-8 lg:px-12 xl:px-16 2xl:px-20 md:flex md:justify-between md:items-start">
       <div className="flex flex-col md:items-start">
         <Link href="/">
           <a className="self-center md:self-auto mt-10 mb-3 md:mt-0 md:mb-3">

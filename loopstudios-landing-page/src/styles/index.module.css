@@ -8,5 +8,7 @@
 @media only screen and (min-width: 768px) {
   .layoutContainer {
     background-image: url("/images/desktop/image-hero.jpg");
+    max-width: 1536px;
+    margin: 0 auto;
   }
 }

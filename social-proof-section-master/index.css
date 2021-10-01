@@ -22,7 +22,6 @@ body {
 
 main {
   overflow: hidden;
-  height: 55em;
   background-image: url("images/bg-pattern-top-desktop.svg"),
     url("images/bg-pattern-bottom-desktop.svg");
   background-repeat: no-repeat;
@@ -30,6 +29,8 @@ main {
 }
 
 .container {
+  max-width: 1440px;
+  margin: 0 auto;
   margin: 75px auto 0;
   width: 85%;
 }
@@ -212,6 +213,5 @@ h1 {
   main {
     background-image: url("images/bg-pattern-top-mobile.svg"),
       url("images/bg-pattern-bottom-mobile.svg");
-    background-position: top left, bottom right;
   }
 }
