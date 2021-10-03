@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Cyan: hsl(167, 43%, 70%);
+
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsl(51, 100%, 49%);
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%); /* graphic design text */
+  --Dark-blue: hsl(198, 62%, 26%); /* photography text */
+  --Dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+}
+
+header {
+  background-image: url("/mobile/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    background-image: url("/desktop/image-header.jpg");
+  }
+}
+
+.mobile-menu::before {
+  content: "";
+  position: absolute;
+  border-top: 25px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 25px solid #fff;
+  top: -25px;
+  right: 0;
+}
+
+@layer base {
+  header,
+  main,
+  footer {
+    @apply max-w-[1440px] mx-auto text-lg;
+  }
+}
+
+@layer components {
+  .contact {
+    @apply py-4 font-serif text-black uppercase rounded-full bg-Yellow mt-11 px-7 md:bg-white md:hover:text-white md:hover:bg-[#ffffff66];
+  }
+}
