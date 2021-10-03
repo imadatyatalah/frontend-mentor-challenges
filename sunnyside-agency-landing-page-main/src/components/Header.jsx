@@ -13,7 +13,7 @@ const Header = () => {
 
   const listClassNames = `${
     isOpen
-      ? "text-Dark-grayish-blue absolute text-center w-auto top-24 left-0 right-6 ml-6 py-8 bg-white mobile-menu"
+      ? "text-Dark-grayish-blue absolute text-center w-auto top-24 left-0 right-6 ml-6 py-3 bg-white mobile-menu"
       : "hidden"
   } md:py-0 md:static md:bg-transparent md:flex md:items-center md:justify-between`;
 
