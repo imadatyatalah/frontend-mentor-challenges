@@ -19,14 +19,72 @@
 
 header {
   background-image: url("/mobile/image-header.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  @apply bg-center bg-image;
+}
+
+.transform-image {
+  background-image: url(/mobile/image-transform.jpg);
+  @apply bg-center bg-image;
+}
+
+.stand-out-image {
+  background-image: url(/mobile/image-stand-out.jpg);
+  @apply bg-center bg-image;
+}
+
+.graphic-design-image {
+  background-image: url(/desktop/image-graphic-design.jpg);
+  @apply bg-top bg-image;
+}
+
+.photography-image {
+  background-image: url(/desktop/image-photography.jpg);
+  @apply bg-top bg-image;
 }
 
 @media only screen and (min-width: 768px) {
   header {
     background-image: url("/desktop/image-header.jpg");
+  }
+
+  .transform-image {
+    background-image: url(/desktop/image-transform.jpg);
+  }
+
+  .stand-out-image {
+    background-image: url(/desktop/image-stand-out.jpg);
+  }
+
+  .transform-learn-more::before {
+    content: "";
+    width: 100%;
+    border-bottom: 8px solid var(--Yellow);
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+
+  .transform-learn-more:hover::before {
+    opacity: 1;
+  }
+
+  .stand-out-learn-more::before {
+    content: "";
+    width: 100%;
+    border-bottom: 8px solid var(--Soft-red);
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.3;
+  }
+
+  .stand-out-learn-more:hover::before {
+    opacity: 1;
   }
 }
 
@@ -44,12 +102,15 @@ header {
   header,
   main,
   footer {
-    @apply max-w-[1440px] mx-auto text-lg;
+    @apply max-w-[1440px] mx-auto text-lg tracking-wide;
   }
 }
 
 @layer components {
   .contact {
     @apply py-4 font-serif text-black uppercase rounded-full bg-Yellow mt-11 px-7 md:bg-white md:hover:text-white md:hover:bg-[#ffffff66];
+  }
+  .bg-image {
+    @apply bg-no-repeat bg-cover;
   }
 }

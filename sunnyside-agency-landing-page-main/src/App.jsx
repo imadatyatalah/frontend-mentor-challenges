@@ -1,7 +1,15 @@
 import React from "react";
 
-const App = () => {
-  return <main className=""></main>;
-};
+import Images from "./components/Images";
+import Testimonials from "./components/Testimonials";
+import Gallery from "./components/Gallery";
+
+const App = () => (
+  <main>
+    <Images />
+    <Testimonials />
+    <Gallery />
+  </main>
+);
 
 export default App;
