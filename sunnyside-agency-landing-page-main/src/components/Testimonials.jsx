@@ -47,7 +47,7 @@ const Testimonials = () => (
               {name}
             </h3>
 
-            <small className="text-Dark-grayish-blue">{job}</small>
+            <p className="text-Dark-grayish-blue">{job}</p>
           </div>
         );
       })}

@@ -27,8 +27,18 @@ const Gallery = () => (
   <section className="grid grid-cols-2 md:flex">
     {MOBILE_IMAGES.map(({ mobileSrc, desktopSrc, alt }) => (
       <div key={alt}>
-        <img src={mobileSrc} alt={alt} className="md:hidden" />
-        <img src={desktopSrc} alt={alt} className="hidden md:block" />
+        <img
+          src={mobileSrc}
+          alt={alt}
+          className="md:hidden"
+          aria-hidden="true"
+        />
+        <img
+          src={desktopSrc}
+          alt={alt}
+          className="hidden md:block"
+          aria-hidden="true"
+        />
       </div>
     ))}
   </section>

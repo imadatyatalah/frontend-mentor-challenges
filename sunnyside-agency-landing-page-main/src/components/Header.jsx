@@ -21,12 +21,21 @@ const Header = () => {
     <header>
       <div className="flex items-center justify-between px-6 py-8">
         <div>
-          <a href="/">
+          <a href="/" aria-label="homepage">
             <Logo className="fill-[white]" />
           </a>
         </div>
 
         <nav className="md:w-[30rem] lg:w-[35rem]">
+          <button
+            className="flex md:hidden"
+            aria-label="menu"
+            aria-expanded={isOpen}
+            onClick={handleClick}
+          >
+            <IconHamburger aria-hidden="true" />
+          </button>
+
           <ul className={listClassNames}>
             {LINKS.map((link) => {
               const isContact = link === "Contact";
@@ -46,10 +55,6 @@ const Header = () => {
             })}
           </ul>
         </nav>
-
-        <button className="flex md:hidden" onClick={handleClick}>
-          <IconHamburger />
-        </button>
       </div>
 
       <div className="flex flex-col items-center pb-[8.5rem] text-center">
@@ -57,7 +62,7 @@ const Header = () => {
           We are creatives
         </h1>
 
-        <IconArrowDown />
+        <IconArrowDown aria-hidden="true" />
       </div>
     </header>
   );

@@ -11,6 +11,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -47,3 +48,7 @@ Users should be able to:
 
 - Frontend Mentor - [@imadatyatalah](https://www.frontendmentor.io/profile/imadatyatalah)
 - GitHub - [@imadatyatalah](https://www.github.com/imadatyatalah)
+
+## Acknowledgments
+
+Thank you [@pikamart](https://www.frontendmentor.io/profile/pikamart).
