@@ -10,3 +10,4 @@
 - [x] [loopstudios-landing-page](https://loopstudios-landing-page-zeta.vercel.app/)
 - [x] [time-tracking-dashboard-main](https://time-tracking-dashboard-main.netlify.app/)
 - [x] [sunnyside-agency-landing-page-main](https://sunnyside-agency-landing-page-imadatyatalah.netlify.app/)
+- [x] [stats-preview-card-component-main](https://stats-preview-card-component-main-imadatyatalah.netlify.app/)
