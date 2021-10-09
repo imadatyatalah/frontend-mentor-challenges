@@ -1,72 +1,13 @@
 import React from "react";
 
+import Card from "./components/Card";
+import Attribution from "./components/Attribution";
+
 const App = () => (
   <main>
     <section>
-      <div className="card">
-        <div className="image-container">
-          <img
-            src="/image-header-mobile.jpg"
-            alt="people"
-            className="mobile-image"
-          />
-          <img
-            src="/image-header-desktop.jpg"
-            alt="people"
-            className="desktop-image"
-          />
-        </div>
-
-        <div className="content-container">
-          <h1>
-            Get <span>insights</span> that help your business grow.
-          </h1>
-
-          <p className="description">
-            Discover the benefits of data analytics and make better decisions
-            regarding revenue, customer experience, and overall efficiency.
-          </p>
-
-          <div className="stats-container">
-            <div>
-              <h2>10k+</h2>
-              <p>companies</p>
-            </div>
-
-            <div>
-              <h2>314</h2>
-              <p>templates</p>
-            </div>
-
-            <div>
-              <h2>12M+</h2>
-              <p>queries</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <div className="attribution">
-          Challenge by{" "}
-          <a
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Frontend Mentor
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://github.com/imadatyatalah"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Imad Atyat-Alah
-          </a>
-          .
-        </div>
-      </footer>
+      <Card />
+      <Attribution />
     </section>
   </main>
 );
