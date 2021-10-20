@@ -98,7 +98,7 @@
     padding: 1rem;
     border-radius: 0.5rem;
 
-    &__original_link {
+    &__originalLink {
       color: colors.$dark-violet;
       display: block;
       padding-bottom: 0.5rem;
@@ -109,7 +109,7 @@
       opacity: 40%;
     }
 
-    &__full_short_link {
+    &__fullShortLink {
       color: colors.$cyan;
       display: block;
       padding: 0.5rem 0;
@@ -120,14 +120,14 @@
       width: 100%;
     }
 
-    &__primary_btn_copied {
+    &__primaryBtnCopied {
       background-color: colors.$dark-violet;
     }
   }
 }
 
 // Advanced Statistics
-.advanced_statistics {
+.advancedStatistics {
   text-align: center;
   padding: 1rem 1rem 0 1rem;
   background-color: #9e9aa733;
@@ -196,7 +196,7 @@
 }
 
 // Sub Footer
-.sub_footer {
+.subFooter {
   background-image: url("/bg/bg-boost-mobile.svg");
   background-color: colors.$dark-violet;
   background-repeat: no-repeat;
@@ -214,7 +214,7 @@
 }
 
 @media only screen and (min-width: breakpoints.$breakpoint-tablet) {
-  .sub_footer {
+  .subFooter {
     background-image: url("/bg/bg-boost-desktop.svg");
     padding: 2.5rem 0;
 
@@ -284,7 +284,7 @@
       justify-content: space-between;
       align-items: center;
 
-      &__original_link {
+      &__originalLink {
         padding: 0;
       }
 
@@ -295,9 +295,6 @@
       div {
         display: flex;
         align-items: center;
-
-        &__full_short_link {
-        }
       }
 
       button {
@@ -307,7 +304,7 @@
     }
   }
 
-  .advanced_statistics {
+  .advancedStatistics {
     padding: 2.5rem 1rem 0 1rem;
 
     &__intro {

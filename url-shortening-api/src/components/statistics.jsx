@@ -24,8 +24,8 @@ const stats = [
 ];
 
 const Statistics = () => (
-  <section className={styles.advanced_statistics}>
-    <div className={styles.advanced_statistics__intro}>
+  <section className={styles.advancedStatistics}>
+    <div className={styles.advancedStatistics__intro}>
       <h2>Advanced Statistics</h2>
 
       <p>
@@ -34,10 +34,10 @@ const Statistics = () => (
       </p>
     </div>
 
-    <div className={styles.advanced_statistics__cards}>
-      <span className={styles.advanced_statistics__cards__line}></span>
+    <div className={styles.advancedStatistics__cards}>
+      <span className={styles.advancedStatistics__cards__line}></span>
       {stats.map(({ title, content, image }) => (
-        <div className={styles.advanced_statistics__cards__card} key={title}>
+        <div className={styles.advancedStatistics__cards__card} key={title}>
           <div>
             <img src={image} alt={title} />
           </div>

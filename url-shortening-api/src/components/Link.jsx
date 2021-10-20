@@ -15,7 +15,7 @@ const Link = ({ link }) => {
         href={original_link}
         target="_blank"
         rel="noopener noreferrer"
-        className={styles.shorten__original_link}
+        className={styles.shorten__originalLink}
       >
         {original_link}
       </a>
@@ -27,7 +27,7 @@ const Link = ({ link }) => {
           href={full_short_link}
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.shorten__full_short_link}
+          className={styles.shorten__fullShortLink}
         >
           {full_short_link}
         </a>
@@ -35,7 +35,7 @@ const Link = ({ link }) => {
         <button
           onClick={() => clipboard.copy(full_short_link)}
           className={`primary_btn ${
-            clipboard.copied ? styles.shorten__primary_btn_copied : null
+            clipboard.copied ? styles.shorten__primaryBtnCopied : null
           }`}
         >
           {clipboard.copied ? "Copied!" : "Copy"}

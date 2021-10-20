@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../styles/pages/home.module.scss";
 
 const SubFooter = () => (
-  <section className={styles.sub_footer}>
+  <section className={styles.subFooter}>
     <div>
       <h2>Boost your links today</h2>
 

@@ -1,6 +1,5 @@
 import React from "react";
-
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 import Statistics from "../components/statistics";
 import SubFooter from "../components/SubFooter";
@@ -9,7 +8,9 @@ import HeroSection from "../components/HeroSection";
 
 const Home = () => (
   <>
-    <NextSeo title="Frontend Mentor | Shortly URL shortening API Challenge" />
+    <Head>
+      <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    </Head>
 
     <HeroSection />
     <ShortenForm />

@@ -59,10 +59,6 @@
 
 @media only screen and (max-width: breakpoints.$breakpoint-tablet) {
   .header {
-    .sign-up-btn {
-      width: 100%;
-    }
-
     &__link {
       opacity: 100%;
       color: white;
@@ -78,7 +74,7 @@
       display: none;
     }
 
-    &__cta-container {
+    &__ctaContainer {
       width: 100%;
       border-top: 1px colors.$gray solid;
       padding-top: 0.75rem;
@@ -86,9 +82,14 @@
       a {
         margin: 0.5rem 0;
       }
+
+      &__signUp {
+        width: 100%;
+        display: inline-block;
+      }
     }
 
-    &__mobile-nav {
+    &__mobileNav {
       z-index: 1;
       background-color: colors.$dark-violet;
       border-radius: 1rem;

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+import styles from "../styles/layout/header.module.scss";
 import { Logo } from "./Logo";
+
+const LINKS = ["Features", "Pricing", "Resources"];
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -9,53 +12,47 @@ const Header = () => {
   const handleClick = () => setOpen(!open);
 
   return (
-    <header className="header">
+    <header className={styles.header}>
       <div>
         <Link href="/">
-          <a className="header__logo">
+          <a className={styles.header__logo}>
             <Logo />
           </a>
         </Link>
       </div>
 
-      <nav className={`header__nav ${open && "header__mobile-nav"}`}>
+      <nav
+        className={`${styles.header__nav} ${open && styles.header__mobileNav}`}
+      >
         <ul>
-          <li>
-            <Link href="/#">
-              <a className="header__link">Features</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/#">
-              <a className="header__link">Pricing</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/#">
-              <a className="header__link">Resources</a>
-            </Link>
-          </li>
+          {LINKS.map((link) => (
+            <li key={link}>
+              <Link href="/#">
+                <a className={styles.header__link}>{link}</a>
+              </Link>
+            </li>
+          ))}
         </ul>
 
-        <div className="header__cta-container">
+        <div className={styles.header__ctaContainer}>
           <Link href="/#">
-            <a className="header__link" style={{ display: "inline-block" }}>
+            <a
+              className={styles.header__link}
+              style={{ display: "inline-block" }}
+            >
               Login
             </a>
           </Link>
 
           <Link href="/#">
-            <a
-              className="primary_btn sign-up-btn"
-              style={{ display: "inline-block" }}
-            >
+            <a className={`primary_btn ${styles.header__ctaContainer__signUp}`}>
               Sign Up
             </a>
           </Link>
         </div>
       </nav>
 
-      <div className="header__toggle">
+      <div className={styles.header__toggle}>
         <button onClick={handleClick}>
           <svg
             fill="#bfbfbf"

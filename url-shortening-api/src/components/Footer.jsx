@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { LogoWhite } from "./Logo";
 
+import styles from "../styles/layout/footer.module.scss";
 import facebookIcon from "../../public/icons/icon-facebook.svg";
 import twitterIcon from "../../public/icons/icon-twitter.svg";
 import pinterestIcon from "../../public/icons/icon-pinterest.svg";
@@ -33,8 +34,8 @@ const socialMediaLinks = [
 
 const Footer = () => (
   <>
-    <footer className="footer">
-      <div className="footer__logo-container">
+    <footer className={styles.footer}>
+      <div>
         <Link href="/">
           <a>
             <LogoWhite />
@@ -42,9 +43,9 @@ const Footer = () => (
         </Link>
       </div>
 
-      <div className="footer__container">
+      <div className={styles.footer__container}>
         {links.map(({ title, links }) => (
-          <div className="footer__container__links" key={title}>
+          <div className={styles.footer__container__links} key={title}>
             <h3>{title}</h3>
 
             <ul>
@@ -60,7 +61,7 @@ const Footer = () => (
         ))}
       </div>
 
-      <div className="footer__social-media">
+      <div className={styles.footer__socialMedia}>
         {socialMediaLinks.map(({ image, name }) => (
           <Link href="/#" key={name}>
             <a>
@@ -75,7 +76,7 @@ const Footer = () => (
       </div>
     </footer>
 
-    <div className="attribution">
+    <div className={styles.attribution}>
       Challenge by{" "}
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
         Frontend Mentor
