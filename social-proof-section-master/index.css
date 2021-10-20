@@ -148,7 +148,8 @@ h1 {
   main {
     text-align: center;
     height: auto;
-    /* overflow: scroll; */
+    background-image: url("images/bg-pattern-top-mobile.svg"),
+      url("images/bg-pattern-bottom-mobile.svg");
   }
 
   .container {
@@ -206,12 +207,5 @@ h1 {
 
   .comment:nth-child(3) {
     margin: 0;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  main {
-    background-image: url("images/bg-pattern-top-mobile.svg"),
-      url("images/bg-pattern-bottom-mobile.svg");
   }
 }

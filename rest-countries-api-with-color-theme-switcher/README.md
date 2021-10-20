@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot for the REST Countries API with color theme switcher coding challenge](./screenshot.png)
+![](./screenshot.png)
 
 ### Links
 
@@ -42,10 +42,10 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [SWR](https://swr.vercel.app/) - For fetching & caching data
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [TailwindCSS](https://tailwindcss.com/) - For styles
+- [SWR](https://swr.vercel.app/) - For fetching & caching data
 
 ### What I learned
 
@@ -69,7 +69,6 @@ const filteredData = useMemo(() => {
 
 ## Author
 
-<!-- - Website - [Add your name here](https://www.your-site.com) -->
-
+- Website - [Imad Atyat-Alah](https://imadatyatalah.vercel.app)
 - Frontend Mentor - [@imadatyatalah](https://www.frontendmentor.io/profile/imadatyatalah)
-- GitHub - [@imadatyatalah](https://github.com/imadatyatalah)
+- Twitter - [@imadatyatalah](https://www.twitter.com/ImadAtyat)

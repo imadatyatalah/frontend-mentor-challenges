@@ -41,5 +41,6 @@ Users should be able to:
 
 ## Author
 
+- Website - [Imad Atyat-Alah](https://imadatyatalah.vercel.app)
 - Frontend Mentor - [@imadatyatalah](https://www.frontendmentor.io/profile/imadatyatalah)
-- GitHub - [@imadatyatalah](https://github.com/imadatyatalah)
+- Twitter - [@imadatyatalah](https://www.twitter.com/ImadAtyat)

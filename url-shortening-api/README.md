@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot for the Shortly URL shortening API coding challenge](./public/screenshot.png)
+![](./public/screenshot.png)
 
 ### Links
 
@@ -57,5 +57,6 @@ I have learned a lot of stuff about styling with SASS!
 
 ## Author
 
+- Website - [Imad Atyat-Alah](https://imadatyatalah.vercel.app)
 - Frontend Mentor - [@imadatyatalah](https://www.frontendmentor.io/profile/imadatyatalah)
-- GitHub - [@imadatyatalah](https://www.github.com/imadatyatalah)
+- Twitter - [@imadatyatalah](https://www.twitter.com/ImadAtyat)
