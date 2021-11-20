@@ -11,3 +11,10 @@
   --color-grayish-blue: hsl(220, 14%, 75%);
   --color-light-grayish-blue: hsl(223, 64%, 98%);
 }
+
+@layer base {
+  header,
+  main {
+    @apply max-w-[1440px] mx-auto;
+  }
+}
