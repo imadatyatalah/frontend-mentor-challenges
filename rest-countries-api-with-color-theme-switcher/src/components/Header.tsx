@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
 import { useTheme } from "next-themes";
-import { Moon, MoonOutline } from "../icons/moon";
+import { Moon, MoonOutline } from "./icons/moon";
 
 const Header = () => {
   const { resolvedTheme, setTheme } = useTheme();

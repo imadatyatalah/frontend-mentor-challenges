@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": ["src/components/*"],
+      "@/modules/*": ["src/modules/*"],
       "@/layout/*": ["src/layout/*"],
       "@/styles/*": ["src/styles/*"],
       "@/types/*": ["src/types/*"],
@@ -20,7 +21,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

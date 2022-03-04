@@ -1,12 +1,7 @@
-/* eslint @typescript-eslint/no-var-requires: "off" */
 const { fontFamily, boxShadow } = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  mode: "jit",
-  purge: [
-    "./src/pages/**/*.{js,jsx,ts,tsx}",
-    "./src/components/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{jsx,tsx}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -30,8 +25,4 @@ module.exports = {
         "0 0px 25px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 };

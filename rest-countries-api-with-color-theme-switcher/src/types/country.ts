@@ -12,13 +12,17 @@ type Language = {
 };
 
 type Translations = {
+  br: string;
+  pt: string;
+  nl: string;
+  hr: string;
+  fa: string;
   de: string;
   es: string;
   fr: string;
   ja: string;
   it: string;
-  br: string;
-  pt: string;
+  hu: string;
 };
 
 type RegionalBlocs = {
@@ -26,7 +30,7 @@ type RegionalBlocs = {
   name: string;
 };
 
-export type Country = {
+export type TCountry = {
   name: string;
   topLevelDomain: string[];
   alpha2Code: string;
@@ -42,13 +46,16 @@ export type Country = {
   area: number;
   gini: number;
   timezones: string[];
-  borders: string[];
+  borders?: string[];
   nativeName: string;
   numericCode: string;
   currencies: Currencies[];
   languages: Language[];
   translations: Translations;
-  flags: string[];
+  flags: {
+    png: string;
+    svg: string;
+  };
   regionalBlocs: RegionalBlocs[];
   cioc: string;
   independent: boolean;

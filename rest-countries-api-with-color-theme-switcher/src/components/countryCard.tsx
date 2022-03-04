@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Country } from "@/types/country";
+import type { TCountry } from "@/types/country";
 
-const CountryCard = ({ country }: { country: Country }) => {
-  const { name, flags, demonym, population, continent, capital, alpha3Code } =
+const CountryCard = ({ country }: { country: TCountry }) => {
+  const { name, flags, demonym, population, region, capital, alpha3Code } =
     country;
 
   return (
@@ -14,7 +14,7 @@ const CountryCard = ({ country }: { country: Country }) => {
         <Link href={`/${alpha3Code}`}>
           <a>
             <Image
-              src={flags[0]}
+              src={flags.svg}
               width="700"
               height="500"
               alt={`${demonym} flag`}
@@ -38,7 +38,7 @@ const CountryCard = ({ country }: { country: Country }) => {
           </li>
           <li className="font-light py-px">
             <span className="font-semibold">Region: </span>
-            {continent}
+            {region}
           </li>
           <li className="font-light py-px">
             <span className="font-semibold">Capital: </span>
