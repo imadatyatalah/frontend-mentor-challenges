@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(216, 19%, 38%);
+  --dark-grayish-blue: hsl(219, 19%, 24%);
+}
+
+section {
+  background-color: hsl(220, 22%, 16%);
+}
+
+.card-pattern {
+  background-image: url("images/pattern-divider-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .card-pattern {
+    background-image: url("images/pattern-divider-desktop.svg");
+  }
+}
+
+.card-button {
+  transform: translateY(75%);
+  transition: box-shadow 0.8s ease-out;
+}
+
+.card-button:hover {
+  box-shadow: 0 0 20px hsl(150, 100%, 66%), 0 0 30px hsl(150, 100%, 66%);
+}
