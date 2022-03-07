@@ -12,5 +12,6 @@
 - [x] [sunnyside-agency-landing-page](https://sunnyside-agency-landing-page-imadatyatalah.netlify.app/)
 - [x] [stats-preview-card-component](https://stats-preview-card-component-main-imadatyatalah.netlify.app/)
 - [x] [qr-code-component](https://qr-code-component-imadatyatalah.netlify.app/)
+- [x] [advice-generator-app]()
 
 <!-- - [ ] [ecommerce-product-page]() -->
