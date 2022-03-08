@@ -1,36 +1,40 @@
-import useSwr from "swr";
+import { useEffect, useState } from "react";
+
 import axios from "axios";
 
-const fetcher = (url: string) => axios.get(url).then((res) => res.data);
-
 interface ISlipAdvice {
-  slip: { id: number; advice: string };
+  id: number;
+  advice: string;
 }
 
 const Card = () => {
-  const { data, error, mutate } = useSwr<ISlipAdvice>(
-    "https://api.adviceslip.com/advice",
-    fetcher
-  );
+  const [advice, setAdvice] = useState<ISlipAdvice>({} as ISlipAdvice);
 
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  const fetchAdvice = () => {
+    axios
+      .get<{ slip: ISlipAdvice }>("https://api.adviceslip.com/advice")
+      .then((res) => setAdvice(res.data.slip));
+  };
 
-  const handleClick = () => mutate();
+  useEffect(() => {
+    fetchAdvice();
+  }, []);
+
+  const handleClick = () => fetchAdvice();
 
   return (
-    <div className="w-full p-4 pt-8 m-4 text-center sm:px-8 rounded-xl bg-dark-grayish-blue sm:w-[540px]">
+    <div className="w-full p-4 pt-8 my-6 text-center sm:px-8 rounded-xl bg-dark-grayish-blue sm:w-[540px] shadow-2xl">
       <span className="text-xs uppercase text-neon-green tracking-[0.25em]">
-        Advice #{data.slip.id}
+        Advice #{advice.id}
       </span>
 
       <div className="py-[38px]">
         <p className="text-2xl text-light-cyan sm:leading-10 sm:text-[28px]">
-          <q>{data.slip.advice}</q>
+          <q>{advice.advice}</q>
         </p>
       </div>
 
-      <div className="-mb-6 card-pattern h-[50px]"></div>
+      <div className="-mb-6 h-[50px] card-pattern"></div>
 
       <button
         className="card-button m-auto grid place-items-center h-[60px] w-[60px] rounded-[50%] bg-neon-green"

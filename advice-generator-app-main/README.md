@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/advice-generator-app-built-using-react-and-styled-using-tailwind-css-Lqd0zp_Ce)
+- [Live Site URL](https://advice-generator-app-main-imadatyatalah.netlify.app/)
 
 ## My process
 

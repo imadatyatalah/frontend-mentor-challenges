@@ -4,7 +4,7 @@ const App = () => {
   return (
     <section
       role="main"
-      className="flex flex-col items-center justify-center min-h-screen font-manrope"
+      className="flex flex-col items-center justify-center min-h-screen px-4 font-manrope sm:px-0"
     >
       <h1 className="sr-only">Advice Generator</h1>
 
