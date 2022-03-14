@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --lime-green: #1db489;
+  --bright-red: #dc414c;
+
+  --facebook: #198ff5;
+  --twitter: #1ca0f2;
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youTube: #c4032a;
+}
+
+body {
+  @apply text-sm;
+}
+
+.overall-card {
+  @apply border-t-4 border-transparent bg-[#f0f2fa];
+}
+
+.facebook-overall-card {
+  @apply border-[#198ff5];
+}
+
+.twitter-overall-card {
+  @apply border-[#1ca0f2];
+}
+
+.instagram-overall-card {
+  background: linear-gradient(hsl(227, 47%, 96%), hsl(227, 47%, 96%))
+      padding-box,
+    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
+}
+
+.youtube-overall-card {
+  @apply border-[#c4032a];
+}
