@@ -10,7 +10,6 @@ export const data = [
     followers: 1987,
     text: "Followers",
     number: 12,
-    // color: "#198ff5",
     socialMediaApp: "facebook",
   },
   {
@@ -19,7 +18,6 @@ export const data = [
     followers: 1044,
     text: "Followers",
     number: 99,
-    // color: "#1ca0f2",
     socialMediaApp: "twitter",
   },
   {
@@ -28,7 +26,6 @@ export const data = [
     followers: "11k",
     text: "Followers",
     number: 1099,
-    // color: "",
     socialMediaApp: "instagram",
   },
   {
@@ -37,7 +34,17 @@ export const data = [
     followers: 8239,
     text: "Subscribers",
     number: -144,
-    // color: "#c4032a",
     socialMediaApp: "youtube",
   },
+];
+
+export const todaysOverview = [
+  { title: "Page Views", number: 87, percentage: "3%" },
+  { title: "Likes", number: 52, percentage: "2%" },
+  { title: "Likes", number: 5462, percentage: "2257%" },
+  { title: "Profile Views", number: "52k", percentage: "1375%" },
+  { title: "Retweets", number: 117, percentage: "303%" },
+  { title: "Likes", number: 507, percentage: "553%" },
+  { title: "Likes", number: 107, percentage: "19%" },
+  { title: "Total Views", number: 1407, percentage: "12%" },
 ];

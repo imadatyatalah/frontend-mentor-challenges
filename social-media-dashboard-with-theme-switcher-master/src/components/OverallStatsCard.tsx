@@ -10,7 +10,6 @@ interface Props {
     followers: number | string;
     text: string;
     number: number;
-    // color: string;
     socialMediaApp: string;
   };
 }
@@ -35,7 +34,7 @@ const OverallStatsCard = ({ data }: Props) => {
         <p className="text-[#63687e] font-bold">{username}</p>
       </div>
 
-      <p className="text-[56px] leading-none tracking-[-0.04em] font-bold pt-6 pb-2">
+      <p className="text-[56px] leading-none tracking-[-0.04em] font-bold pt-6 pb-2 dark:text-white">
         {followers}
       </p>
 

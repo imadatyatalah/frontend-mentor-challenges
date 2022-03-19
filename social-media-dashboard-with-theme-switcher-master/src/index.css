@@ -13,7 +13,7 @@
 }
 
 body {
-  @apply text-sm;
+  @apply text-sm my-[45px] px-[24px] max-w-[1440px] mx-auto dark:bg-[#1e202a] dark:text-[#8b97c6];
 }
 
 .overall-card {
