@@ -16,7 +16,7 @@ const OverviewCard = ({ data }: Props) => {
   const { percentage, number, title, icon } = data;
 
   const containerClassNames = classNames(
-    `max-h-[125px] bg-[#f0f2fa] dark:bg-[#252a41] rounded-[4px] mb-[16px] py-[26px] px-[25px] sm:mb-0`
+    `cursor-pointer max-h-[125px] bg-[#f0f2fa] hover:bg-[#e5e8f6] dark:hover:bg-[#2e3552] dark:bg-[#252a41] rounded-[4px] mb-[16px] py-[26px] px-[25px] sm:mb-0`
   );
 
   const todayClassNames = classNames(
@@ -28,7 +28,9 @@ const OverviewCard = ({ data }: Props) => {
     <div className={containerClassNames}>
       <div className="flex items-center justify-between mb-[34px]">
         <div>
-          <h3 className="font-bold">{title}</h3>
+          <h3 className="font-bold text-[#63687e] dark:text-[#8b97c6]">
+            {title}
+          </h3>
         </div>
 
         <div>{icon}</div>

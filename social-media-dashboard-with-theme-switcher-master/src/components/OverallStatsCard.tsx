@@ -31,14 +31,16 @@ const OverallStatsCard = ({ data }: Props) => {
       <div className="flex items-center justify-center">
         <div className="mr-2">{icon}</div>
 
-        <p className="text-[#63687e] font-bold">{username}</p>
+        <p className="text-[#63687e] dark:text-[#8b97c6] font-bold">
+          {username}
+        </p>
       </div>
 
       <p className="text-[56px] leading-none tracking-[-0.04em] font-bold pt-6 pb-2 dark:text-white">
         {followers}
       </p>
 
-      <p className="uppercase text-[#63687e] tracking-[0.42em] text-xs">
+      <p className="uppercase text-[#63687e] dark:text-[#8b97c6] tracking-[0.42em] text-xs">
         {text}
       </p>
 

@@ -15,8 +15,8 @@ const ColorModeToggle = () => {
 
   return (
     <Switch.Group>
-      <div className="flex items-center justify-between pt-[26px] pb-[46px] sm:p-0">
-        <Switch.Label className="font-bold text-[#63687e]">
+      <div className="flex items-center justify-between pt-[26px] pb-[46px] sm:p-0 group">
+        <Switch.Label className="font-bold text-[#63687e] dark:text-[#8b97c6] sm:dark:group-hover:text-white">
           Dark Mode
         </Switch.Label>
 

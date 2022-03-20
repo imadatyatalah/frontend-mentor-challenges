@@ -8,7 +8,9 @@ const Header = () => {
           Social Media Dashboard
         </h1>
 
-        <p className="font-bold text-[#63687e]">Total Followers: 23,004</p>
+        <p className="font-bold text-[#63687e] dark:text-[#8b97c6]">
+          Total Followers: 23,004
+        </p>
       </div>
 
       <ColorModeToggle />

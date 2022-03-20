@@ -17,7 +17,7 @@ body {
 }
 
 .overall-card {
-  @apply border-t-4 border-transparent bg-[#f0f2fa] dark:bg-[#252a41];
+  @apply border-t-4 border-transparent bg-[#f0f2fa] dark:bg-[#252a41] hover:bg-[#e5e8f6] dark:hover:bg-[#2e3552] cursor-pointer;
 }
 
 .facebook-overall-card {
@@ -34,9 +34,19 @@ body {
     linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
 }
 
+.light .instagram-overall-card:hover {
+  background: linear-gradient(#e5e8f6, #e5e8f6) padding-box,
+    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
+}
+
 .dark .instagram-overall-card {
   background: linear-gradient(hsl(228, 28%, 20%), hsl(228, 28%, 20%))
       padding-box,
+    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
+}
+
+.dark .instagram-overall-card:hover {
+  background: linear-gradient(#2e3552, #2e3552) padding-box,
     linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
 }
 
