@@ -39,12 +39,27 @@ export const data = [
 ];
 
 export const todaysOverview = [
-  { title: "Page Views", number: 87, percentage: "3%" },
-  { title: "Likes", number: 52, percentage: "2%" },
-  { title: "Likes", number: 5462, percentage: "2257%" },
-  { title: "Profile Views", number: "52k", percentage: "1375%" },
-  { title: "Retweets", number: 117, percentage: "303%" },
-  { title: "Likes", number: 507, percentage: "553%" },
-  { title: "Likes", number: 107, percentage: "19%" },
-  { title: "Total Views", number: 1407, percentage: "12%" },
+  { title: "Page Views", number: 87, percentage: 3, icon: <IconFacebook /> },
+  { title: "Likes", number: 52, percentage: -2, icon: <IconFacebook /> },
+  {
+    title: "Likes",
+    number: 5462,
+    percentage: 2257,
+    icon: <IconInstagram />,
+  },
+  {
+    title: "Profile Views",
+    number: "52k",
+    percentage: 1375,
+    icon: <IconInstagram />,
+  },
+  { title: "Retweets", number: 117, percentage: 303, icon: <IconTwitter /> },
+  { title: "Likes", number: 507, percentage: 553, icon: <IconTwitter /> },
+  { title: "Likes", number: 107, percentage: -19, icon: <IconYoutube /> },
+  {
+    title: "Total Views",
+    number: 1407,
+    percentage: -12,
+    icon: <IconYoutube />,
+  },
 ];

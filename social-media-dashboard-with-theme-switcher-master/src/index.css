@@ -8,16 +8,16 @@
 
   --facebook: #198ff5;
   --twitter: #1ca0f2;
-  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  /* --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%); */
   --youTube: #c4032a;
 }
 
 body {
-  @apply text-sm my-[45px] px-[24px] max-w-[1440px] mx-auto dark:bg-[#1e202a] dark:text-[#8b97c6];
+  @apply text-sm my-[45px] px-[24px] max-w-[1440px] mx-auto text-[#1e202a] dark:bg-[#1e202a] dark:text-[#8b97c6];
 }
 
 .overall-card {
-  @apply border-t-4 border-transparent bg-[#f0f2fa];
+  @apply border-t-4 border-transparent bg-[#f0f2fa] dark:bg-[#252a41];
 }
 
 .facebook-overall-card {
@@ -28,8 +28,14 @@ body {
   @apply border-[#1ca0f2];
 }
 
-.instagram-overall-card {
+.light .instagram-overall-card {
   background: linear-gradient(hsl(227, 47%, 96%), hsl(227, 47%, 96%))
+      padding-box,
+    linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
+}
+
+.dark .instagram-overall-card {
+  background: linear-gradient(hsl(228, 28%, 20%), hsl(228, 28%, 20%))
       padding-box,
     linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) border-box;
 }
