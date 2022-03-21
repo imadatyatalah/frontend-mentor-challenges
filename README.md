@@ -13,6 +13,6 @@
 - [x] [stats-preview-card-component](https://stats-preview-card-component-main-imadatyatalah.netlify.app/)
 - [x] [qr-code-component](https://qr-code-component-imadatyatalah.netlify.app/)
 - [x] [advice-generator-app](https://advice-generator-app-main-imadatyatalah.netlify.app/)
-- [x] [social-media-dashboard-with-theme-switcher-master](/social-media-dashboard-with-theme-switcher-master)
+- [x] [social-media-dashboard-with-theme-switcher-master](https://social-media-dashboard-with-theme-switcher-imadatyatalah.netlify.app/)
 
 <!-- - [ ] [ecommerce-product-page]() -->

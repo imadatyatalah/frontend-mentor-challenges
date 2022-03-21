@@ -24,12 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot-dark.png)
+![](./screenshot-light.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL]()
+- [Live Site URL](https://social-media-dashboard-with-theme-switcher-imadatyatalah.netlify.app/)
 
 ## My process
 
