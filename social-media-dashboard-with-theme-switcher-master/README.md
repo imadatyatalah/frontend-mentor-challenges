@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-solution-l2tNsm_cI)
 - [Live Site URL](https://social-media-dashboard-with-theme-switcher-imadatyatalah.netlify.app/)
 
 ## My process
