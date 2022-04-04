@@ -10,10 +10,16 @@ interface ISlipAdvice {
 const Card = () => {
   const [advice, setAdvice] = useState<ISlipAdvice>({} as ISlipAdvice);
 
-  const fetchAdvice = () => {
-    axios
-      .get<{ slip: ISlipAdvice }>("https://api.adviceslip.com/advice")
-      .then((res) => setAdvice(res.data.slip));
+  const fetchAdvice = async () => {
+    try {
+      const { data } = await axios.get<{ slip: ISlipAdvice }>(
+        "https://api.adviceslip.com/advice"
+      );
+
+      setAdvice(data.slip);
+    } catch (error) {
+      setAdvice({ id: 0, advice: "Oooops! Something went wrong." });
+    }
   };
 
   useEffect(() => {
